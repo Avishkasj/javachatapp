@@ -3,8 +3,8 @@
 Course Code - ICT3113
 
 Group Memners - J.M.A.S. Jayasooriya TG514 <br>
-                E.M.D.S. Ekanayake TG480
-                J.S.M. Priyashan. TG486
+                E.M.D.S. Ekanayake TG480 <br>
+                J.S.M. Priyashan. TG486 <br>
                 A.M.H.S.G. Bandara
                 
                 
