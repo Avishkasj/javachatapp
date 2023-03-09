@@ -16,10 +16,6 @@ public class Admin extends JFrame{
     private JButton removeButton2;
     private JButton addButton3;
     private JButton removeButton3;
-    private JButton deleteButton;
-    private JButton deleteButton1;
-    private JButton deleteButton2;
-    private JButton deleteButton3;
     private JButton createNewChatButton;
     //    private JPanel pp;
 }
