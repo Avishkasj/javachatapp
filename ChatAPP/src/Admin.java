@@ -8,7 +8,7 @@ public class Admin extends JFrame{
     Admin(){
         this.setContentPane(this.pp);
         this.setVisible(true);
-        this.setSize(600,400);
+        this.setSize(800,500);
         del1.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
