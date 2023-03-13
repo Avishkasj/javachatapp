@@ -1,8 +1,11 @@
 import javax.swing.JOptionPane;
 import java.rmi.Naming;
 
+
 public class ChatClientMain {
     public static void main(String[] args) {
+
+
         try {
             ChatServer server = (ChatServer) Naming.lookup("rmi://localhost/chatServer");
             ChatClient client = new ChatClientImpl(server);
@@ -19,5 +22,10 @@ public class ChatClientMain {
             System.err.println("Chat client exception: " + e.getMessage());
             e.printStackTrace();
         } 
+    }
+
+
+    public void Gui(){
+
     }
 }
