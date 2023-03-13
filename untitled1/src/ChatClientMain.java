@@ -1,3 +1,4 @@
+import javax.swing.JOptionPane;
 import java.rmi.Naming;
 
 public class ChatClientMain {
@@ -8,8 +9,10 @@ public class ChatClientMain {
             server.register(client);
             System.out.println("Chat client ready");
             while (true) {
-                // Read input from the user and send it to the server
-                String message = System.console().readLine();
+                // Get input from the user using a dialog box
+                String message = JOptionPane.showInputDialog("Enter a message:");
+
+                // Send the message to the server
                 client.sendMessage(message);
             }
         } catch (Exception e) {
