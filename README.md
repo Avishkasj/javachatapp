@@ -10,6 +10,6 @@ Group Memners - <br>J.M.A.S. Jayasooriya - TG514 <br>
               
 #Run
 
-step1 run ChatServerMain
+step1 run ChatServerMain <br>
 step2 run ChatClientMain
                 
