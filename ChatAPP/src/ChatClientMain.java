@@ -60,7 +60,6 @@ public class ChatClientMain {
         }
     }
 
-    
     public void displayMessage(String message) {
         addMessage("Other: " + message, false);
     }

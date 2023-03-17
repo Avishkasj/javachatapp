@@ -10,7 +10,7 @@ public class ChatServerImpl extends UnicastRemoteObject implements ChatServer {
         super();
         clients = new ArrayList<ChatClient>();
     }
-
+    
     public void register(ChatClient client) throws RemoteException {
         clients.add(client);
         System.out.println("Client registered: " + client);
