@@ -1,6 +1,7 @@
-import java.rmi.Naming;
 import javax.swing.*;
 import java.awt.*;
+import java.rmi.Naming;
+
 
 public class ChatClientMain {
     private JTextArea chatArea;
@@ -41,11 +42,11 @@ public class ChatClientMain {
             if (!message.isEmpty()) {
                 try {
                     client.sendMessage(message);
+                    textField.setText("");
                 } catch (Exception ex) {
                     System.err.println("Error sending message: " + ex.getMessage());
                     ex.printStackTrace();
                 }
-                textField.setText("");
             }
         });
     }
