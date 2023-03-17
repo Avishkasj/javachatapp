@@ -17,4 +17,6 @@ public class ChatClientImpl extends UnicastRemoteObject implements ChatClient {
     public void sendMessage(String message) throws RemoteException {
         server.broadcast(message);
     }
+
+
 }
