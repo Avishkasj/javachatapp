@@ -6,7 +6,6 @@ public class ChatClientImpl extends UnicastRemoteObject implements ChatClient {
     private ChatClientMain ui;
 
     public ChatClientImpl(ChatServer server, ChatClientMain ui) throws RemoteException {
-        super();
         this.server = server;
         this.ui = ui;
     }
