@@ -36,19 +36,6 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="15db7" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="8" fill="0" indent="20" use-parent-layout="false">
-            <preferred-size width="63" height="159"/>
-          </grid>
-        </constraints>
-        <properties>
-          <background color="-16711423"/>
-          <font size="14" style="1"/>
-          <foreground color="-16711423"/>
-          <text value="Username"/>
-        </properties>
-      </component>
       <component id="924e4" class="javax.swing.JLabel" binding="minimize">
         <constraints>
           <grid row="0" column="17" row-span="1" col-span="12" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="5" use-parent-layout="false"/>
@@ -75,6 +62,19 @@
           <font size="14" style="1"/>
           <foreground color="-16711423"/>
           <text value="Password"/>
+        </properties>
+      </component>
+      <component id="15db7" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="8" fill="0" indent="20" use-parent-layout="false">
+            <preferred-size width="63" height="159"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-16711423"/>
+          <font size="14" style="1"/>
+          <foreground color="-16711423"/>
+          <text value="Username"/>
         </properties>
       </component>
     </children>
