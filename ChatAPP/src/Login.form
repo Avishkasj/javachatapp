@@ -49,16 +49,6 @@
           <text value="Username"/>
         </properties>
       </component>
-      <component id="5a710" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="8" fill="0" indent="20" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font size="14" style="1"/>
-          <foreground color="-16711423"/>
-          <text value="Password"/>
-        </properties>
-      </component>
       <component id="924e4" class="javax.swing.JLabel" binding="minimize">
         <constraints>
           <grid row="0" column="17" row-span="1" col-span="12" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="5" use-parent-layout="false"/>
@@ -75,6 +65,16 @@
         <properties>
           <icon value="Images/login.png"/>
           <text value="Button"/>
+        </properties>
+      </component>
+      <component id="5a710" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="8" fill="0" indent="20" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="14" style="1"/>
+          <foreground color="-16711423"/>
+          <text value="Password"/>
         </properties>
       </component>
     </children>
