@@ -67,26 +67,17 @@ public class ChatClientMain {
 
     private void addMessage(String message, boolean isRightAligned) {
         StyledDocument doc = chatArea.getStyledDocument();
-        SimpleAttributeSet attributeSet = new SimpleAttributeSet();
-        StyleConstants.setForeground(attributeSet, Color.BLACK);
-        StyleConstants.setBackground(attributeSet, Color.WHITE);
-        StyleConstants.setSpaceAbove(attributeSet, 5);
-        StyleConstants.setSpaceBelow(attributeSet, 5);
-        StyleConstants.setFontSize(attributeSet, 14);
-        StyleConstants.setFontFamily(attributeSet, "Arial");
-        StyleConstants.setBold(attributeSet, false);
-
-        StyleConstants.setAlignment(attributeSet, isRightAligned ? StyleConstants.ALIGN_RIGHT : StyleConstants.ALIGN_LEFT);
-        StyleConstants.setForeground(attributeSet, isRightAligned ? Color.BLUE : Color.BLACK);
-
+        SimpleAttributeSet right = new SimpleAttributeSet();
+        SimpleAttributeSet left = new SimpleAttributeSet();
+        StyleConstants.setAlignment(right, StyleConstants.ALIGN_RIGHT);
+        StyleConstants.setAlignment(left, StyleConstants.ALIGN_LEFT);
         try {
-            doc.insertString(doc.getLength(), message + "\n", attributeSet);
+            doc.insertString(doc.getLength(), message + "\n", isRightAligned ? right : left);
         } catch (Exception ex) {
             System.err.println("Error adding message: " + ex.getMessage());
             ex.printStackTrace();
         }
     }
-
 
     public static void main(String[] args) {
         new ChatClientMain();
