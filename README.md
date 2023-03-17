@@ -6,5 +6,14 @@ Group Memners - <br>J.M.A.S. Jayasooriya - TG514 <br>
                 E.M.D.S. Ekanayake       - TG480 <br>
                 J.S.M. Priyashan         - TG486 <br>
                 A.M.H.S.G. Bandara       - TG487
-                
+ 
+-------------------------Instruction----------------------
+              
+#Run
+
+Step1 :-  run ChatServerMain <br>
+Step2 :-  run ChatClientMain
+
+ 
+-------------------------------------------------------- 
                 

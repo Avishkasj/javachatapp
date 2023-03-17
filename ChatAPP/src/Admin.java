@@ -42,6 +42,5 @@ public class Admin extends JFrame{
     }
     //    private JPanel pp;
 
-
 }
 
