@@ -1,25 +1,30 @@
 import javax.swing.*;
+import javax.swing.text.JTextComponent;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
 import java.awt.*;
 import java.rmi.Naming;
 
-
 public class ChatClientMain {
-    private JTextArea chatArea;
+    private JTextPane chatArea;
     private ChatClient client;
 
     public ChatClientMain() {
         // Create the UI
         JFrame frame = new JFrame("Multi-User Chat");
-        chatArea = new JTextArea();
+        chatArea = new JTextPane();
         chatArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(chatArea);
         frame.add(scrollPane, BorderLayout.CENTER);
 
-        // Create a panel for the text input field
+        // Create a panel for the text input field and submit button
         JPanel inputPanel = new JPanel();
-        inputPanel.setLayout(new BoxLayout(inputPanel, BoxLayout.Y_AXIS));
+        inputPanel.setLayout(new BorderLayout());
         JTextField textField = new JTextField();
-        inputPanel.add(textField);
+        inputPanel.add(textField, BorderLayout.CENTER);
+        JButton submitButton = new JButton("Submit");
+        inputPanel.add(submitButton, BorderLayout.EAST);
         frame.add(inputPanel, BorderLayout.SOUTH);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,22 +42,41 @@ public class ChatClientMain {
             e.printStackTrace();
         }
 
-        textField.addActionListener(e -> {
-            String message = textField.getText().trim();
-            if (!message.isEmpty()) {
-                try {
-                    client.sendMessage(message);
-                    textField.setText("");
-                } catch (Exception ex) {
-                    System.err.println("Error sending message: " + ex.getMessage());
-                    ex.printStackTrace();
-                }
-            }
-        });
+        textField.addActionListener(e -> submitMessage(textField.getText().trim()));
+        submitButton.addActionListener(e -> submitMessage(textField.getText().trim()));
     }
 
+    private void submitMessage(String message) {
+        if (!message.isEmpty()) {
+            try {
+                client.sendMessage(message);
+                addMessage("You: " + message, true);
+            } catch (Exception ex) {
+                System.err.println("Error sending message: " + ex.getMessage());
+                ex.printStackTrace();
+            }
+            JTextComponent textField = (JTextComponent) chatArea.getParent().getComponent(1);
+            textField.setText("");
+        }
+    }
+
+    
     public void displayMessage(String message) {
-        chatArea.append(message + "\n");
+        addMessage("Other: " + message, false);
+    }
+
+    private void addMessage(String message, boolean isRightAligned) {
+        StyledDocument doc = chatArea.getStyledDocument();
+        SimpleAttributeSet right = new SimpleAttributeSet();
+        SimpleAttributeSet left = new SimpleAttributeSet();
+        StyleConstants.setAlignment(right, StyleConstants.ALIGN_RIGHT);
+        StyleConstants.setAlignment(left, StyleConstants.ALIGN_LEFT);
+        try {
+            doc.insertString(doc.getLength(), message + "\n", isRightAligned ? right : left);
+        } catch (Exception ex) {
+            System.err.println("Error adding message: " + ex.getMessage());
+            ex.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
