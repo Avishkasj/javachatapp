@@ -8,7 +8,7 @@ public class ChatServerMain {
             Registry registry = LocateRegistry.createRegistry(1099);
             ChatServer server = new ChatServerImpl();
             Naming.rebind("chatServer", server);
-            System.out.println("Chat server ready");
+            System.out.println("Chat server Started");
         } catch (Exception e) {
             System.err.println("Chat server exception: " + e.getMessage());
             e.printStackTrace();
