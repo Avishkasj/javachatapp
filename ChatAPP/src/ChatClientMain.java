@@ -10,6 +10,7 @@ public class ChatClientMain {
     private JTextPane chatArea;
     private ChatClient client;
 
+
     public ChatClientMain() {
         // Create the UI
         JFrame frame = new JFrame("Multi-User Chat");
@@ -89,5 +90,6 @@ public class ChatClientMain {
 
     public static void main(String[] args) {
         new ChatClientMain();
+
     }
 }

@@ -5,6 +5,8 @@ public class ChatClientImpl extends UnicastRemoteObject implements ChatClient {
     private ChatServer server;
     private ChatClientMain ui;
 
+    String name = null; // fix typo here
+
     public ChatClientImpl(ChatServer server, ChatClientMain ui) throws RemoteException {
         this.server = server;
         this.ui = ui;
@@ -18,5 +20,13 @@ public class ChatClientImpl extends UnicastRemoteObject implements ChatClient {
         server.broadcast(message);
     }
 
+    @Override
+    public void setname(String name) {
+        this.name = name; // fix typo here
+    }
 
+    @Override
+    public String getname() {
+        return name;
+    }
 }
