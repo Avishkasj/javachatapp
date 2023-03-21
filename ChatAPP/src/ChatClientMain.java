@@ -56,8 +56,8 @@ public class ChatClientMain {
                 System.err.println("Error sending message: " + ex.getMessage());
                 ex.printStackTrace();
             }
-            JTextComponent textField = (JTextComponent) chatArea.getParent().getComponent(1);
-            textField.setText("");
+//            JTextComponent textField = (JTextComponent) chatArea.getParent().getComponent(1);
+//            textField.setText("");
         }
     }
 
