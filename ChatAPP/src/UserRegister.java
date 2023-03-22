@@ -12,7 +12,7 @@ public class UserRegister extends JFrame implements ActionListener {
 
     public UserRegister() {
         super("User Registration Form");
-        setSize(600, 400);
+        setSize(600, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Initialize components
@@ -80,6 +80,10 @@ public class UserRegister extends JFrame implements ActionListener {
             // TODO: Implement user registration logic here
 
             JOptionPane.showMessageDialog(this, "User registered successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+            // Redirect to login form
+            Login2 form = new Login2();
+            form.setVisible(true);
+            dispose();
         }
     }
 
