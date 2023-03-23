@@ -82,4 +82,8 @@ public class ChatRoomImpl extends UnicastRemoteObject implements ChatRoom {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
+
+    public void ui(){
+
+    }
 }

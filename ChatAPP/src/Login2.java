@@ -1,12 +1,28 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.rmi.Naming;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
 
 public class Login2 extends JFrame implements ActionListener {
     private JLabel titleLabel, usernameLabel, passwordLabel, imageLabel;
     private JTextField usernameField;
     private JPasswordField passwordField;
     private JButton loginButton;
+
 
     public Login2() {
         super("Login Form");
@@ -54,10 +70,22 @@ public class Login2 extends JFrame implements ActionListener {
 
             if (username.equals("admin") && password.equals("admin")) { // replace with actual login logic
                 JOptionPane.showMessageDialog(this, "Login successful!", "Success", JOptionPane.INFORMATION_MESSAGE);
+
                 dispose(); // close the login form
+
+                // Redirect to ChatRoomImpl
+                try {
+                    ChatRoom chatRoom = new ChatRoomImpl();
+                    Naming.rebind("rmi://localhost/ChatRoom", chatRoom);
+                    System.out.println("Chat room server started.");
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             } else {
                 JOptionPane.showMessageDialog(this, "Invalid username or password.", "Error", JOptionPane.ERROR_MESSAGE);
             }
+
+
         }
     }
 
