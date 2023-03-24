@@ -92,6 +92,3 @@ public class UserRegister extends JFrame implements ActionListener {
         form.setVisible(true);
     }
 }
-
-
-
