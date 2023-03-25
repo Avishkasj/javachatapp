@@ -1,0 +1,1 @@
+chatapp.dbcontroller.HibernateUtil
