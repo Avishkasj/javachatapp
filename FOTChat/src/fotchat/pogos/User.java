@@ -11,9 +11,9 @@ public class User  implements java.io.Serializable {
 
      private Integer id;
      private String username;
-     private String nicname;
+     private String nickname;
      private String email;
-     private String avatar;
+     private byte[] avatar;
      private int isDeleted;
      private String password;
      private int roleId;
@@ -21,9 +21,18 @@ public class User  implements java.io.Serializable {
     public User() {
     }
 
-    public User(String username, String nicname, String email, String avatar, int isDeleted, String password, int roleId) {
+	
+    public User(String username, String nickname, String email, int isDeleted, String password, int roleId) {
+        this.username = username;
+        this.nickname = nickname;
+        this.email = email;
+        this.isDeleted = isDeleted;
+        this.password = password;
+        this.roleId = roleId;
+    }
+    public User(String username, String nickname, String email, byte[] avatar, int isDeleted, String password, int roleId) {
        this.username = username;
-       this.nicname = nicname;
+       this.nickname = nickname;
        this.email = email;
        this.avatar = avatar;
        this.isDeleted = isDeleted;
@@ -45,12 +54,12 @@ public class User  implements java.io.Serializable {
     public void setUsername(String username) {
         this.username = username;
     }
-    public String getNicname() {
-        return this.nicname;
+    public String getNickname() {
+        return this.nickname;
     }
     
-    public void setNicname(String nicname) {
-        this.nicname = nicname;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
     public String getEmail() {
         return this.email;
@@ -59,11 +68,11 @@ public class User  implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-    public String getAvatar() {
+    public byte[] getAvatar() {
         return this.avatar;
     }
     
-    public void setAvatar(String avatar) {
+    public void setAvatar(byte[] avatar) {
         this.avatar = avatar;
     }
     public int getIsDeleted() {
@@ -87,16 +96,6 @@ public class User  implements java.io.Serializable {
     public void setRoleId(int roleId) {
         this.roleId = roleId;
     }
-
-    public void setAvatar(byte[] avatarImage) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setNickname(String nickname) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-
 
 
 }

@@ -223,5 +223,9 @@ public class DBManager {
         List User = qu.list();
         return User;
     }
+
+    public void changpwd(String current_password) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
