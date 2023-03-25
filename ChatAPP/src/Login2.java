@@ -22,7 +22,8 @@ public class Login2 extends JFrame implements ActionListener {
         usernameField = new JTextField(20);
         passwordField = new JPasswordField(20);
         loginButton = new JButton("Login");
-        imageLabel = new JLabel(new ImageIcon("your-logo.png")); // Replace with your own logo
+        imageLabel = new JLabel(new ImageIcon("Images/logo.png"));
+        // Replace with your own logo
 
         // Add components to layout
         JPanel inputPanel = new JPanel(new GridLayout(2, 2, 10, 10));

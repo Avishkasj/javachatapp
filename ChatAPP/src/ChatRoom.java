@@ -7,5 +7,7 @@ public interface ChatRoom extends Remote {
     void unsubscribe(ChatClient client) throws RemoteException;
     void broadcast(String message) throws RemoteException;
     void createChatroom(String chatroomName) throws RemoteException;
+
+
     List<String> getChatrooms() throws RemoteException;
 }
