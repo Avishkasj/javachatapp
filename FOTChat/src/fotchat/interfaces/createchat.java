@@ -133,6 +133,7 @@ public class createchat extends javax.swing.JFrame {
         listModel.addElement(name);
         availablechat.setModel(listModel);
         System.out.println(chat);
+        chatname.setText("");
 
         
         
