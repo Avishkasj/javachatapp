@@ -1,8 +1,9 @@
-# javachatapp GROUP 03
+# javachatapp - GROUP 03
 
-Course Code - ICT3113
+Course Code - ICT3113 <br>
+Advanced java -RMI Chat Application<br>
 
-Group Memners - <br>J.M.A.S. Jayasooriya - TG514 <br>
+Group Members - <br>J.M.A.S. Jayasooriya - TG514 <br>
                 E.M.D.S. Ekanayake       - TG480 <br>
                 J.S.M. Priyashan         - TG486 <br>
                 A.M.H.S.G. Bandara       - TG487
@@ -16,4 +17,7 @@ Step2 :-  run ChatClientMain
 
  
 -------------------------------------------------------- 
+Tools:<br>
+Netbeans IDE<br>
+JAVA 1.8<br>
                 
