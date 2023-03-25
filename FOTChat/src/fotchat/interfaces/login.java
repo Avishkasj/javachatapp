@@ -46,6 +46,7 @@ public class login extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("f2");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 102));
 

@@ -207,17 +207,17 @@ public class signup extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton browsebtn;
-    private javax.swing.JTextField email;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField nickname;
-    private javax.swing.JPasswordField password;
-    private javax.swing.JButton signupbtn;
-    private javax.swing.JTextField uname;
+    public javax.swing.JButton browsebtn;
+    public javax.swing.JTextField email;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel jLabel4;
+    public javax.swing.JLabel jLabel5;
+    public javax.swing.JPanel jPanel1;
+    public javax.swing.JTextField nickname;
+    public javax.swing.JPasswordField password;
+    public javax.swing.JButton signupbtn;
+    public javax.swing.JTextField uname;
     // End of variables declaration//GEN-END:variables
 }
