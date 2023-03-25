@@ -4,7 +4,7 @@ import java.rmi.server.UnicastRemoteObject;
 public class ChatClientImpl extends UnicastRemoteObject implements ChatClient {
     private ChatServer server;
     private ChatClientMain ui;
-
+//
     public ChatClientImpl(ChatServer server, ChatClientMain ui) throws RemoteException {
         this.server = server;
         this.ui = ui;
