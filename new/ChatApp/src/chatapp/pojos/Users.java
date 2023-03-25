@@ -1,4 +1,4 @@
-package chatapp.db;
+package chatapp.pojos;
 // Generated Mar 25, 2023 1:25:06 AM by Hibernate Tools 4.3.1
 
 
@@ -74,5 +74,3 @@ public class Users  implements java.io.Serializable {
 
 
 }
-
-

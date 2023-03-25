@@ -47,6 +47,6 @@ Contributor(s):
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.current_session_context_class">thread</property>
     <property name="hibernate.show_sql">true</property>
-    <mapping resource="chatapp/db/Users.hbm.xml"/>
+    <mapping resource="chatapp/pojos/Users.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
