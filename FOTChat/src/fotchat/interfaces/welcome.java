@@ -121,7 +121,7 @@ public class welcome extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        chatgroups s = new chatgroups();
+        signup s = new signup();
         s.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
