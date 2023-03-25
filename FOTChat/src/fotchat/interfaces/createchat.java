@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package fotchat.interfaces;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.DefaultListModel;
 
 /**
  *
@@ -10,11 +13,13 @@ package fotchat.interfaces;
  */
 public class createchat extends javax.swing.JFrame {
 
+    DefaultListModel<String> listModel;
     /**
      * Creates new form createchat
      */
     public createchat() {
         initComponents();
+        listModel=new DefaultListModel<>();
     }
 
     /**
@@ -31,10 +36,10 @@ public class createchat extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        chatname = new javax.swing.JTextField();
+        createbtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        availablechat = new javax.swing.JList<>();
         jLabel2 = new javax.swing.JLabel();
 
         popupMenu1.setLabel("popupMenu1");
@@ -50,14 +55,25 @@ public class createchat extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 16)); // NOI18N
         jLabel1.setText("Chat Name");
 
-        jButton1.setText("Create");
-
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 1", "Item 2", "Item 3", "Item 4", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+        chatname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chatnameActionPerformed(evt);
+            }
         });
-        jScrollPane1.setViewportView(jList1);
+
+        createbtn.setText("Create");
+        createbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createbtnActionPerformed(evt);
+            }
+        });
+
+        availablechat.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                availablechatValueChanged(evt);
+            }
+        });
+        jScrollPane1.setViewportView(availablechat);
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 16)); // NOI18N
         jLabel2.setText("Available Chat");
@@ -71,10 +87,10 @@ public class createchat extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(chatname)
+                        .addComponent(createbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel1)
-                        .addComponent(jScrollPane1)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)))
                 .addContainerGap(80, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -83,9 +99,9 @@ public class createchat extends javax.swing.JFrame {
                 .addGap(54, 54, 54)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(chatname, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(createbtn)
                 .addGap(34, 34, 34)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -106,6 +122,29 @@ public class createchat extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void createbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createbtnActionPerformed
+        // TODO add your handling code here:
+        String name = chatname.getText();
+       
+        List<String> chat = new ArrayList<>();
+        chat.add(name);
+        
+        listModel.addElement(name);
+        availablechat.setModel(listModel);
+        System.out.println(chat);
+
+        
+        
+    }//GEN-LAST:event_createbtnActionPerformed
+
+    private void chatnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chatnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chatnameActionPerformed
+
+    private void availablechatValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_availablechatValueChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_availablechatValueChanged
 
     /**
      * @param args the command line arguments
@@ -143,14 +182,14 @@ public class createchat extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JList<String> availablechat;
+    private javax.swing.JTextField chatname;
+    private javax.swing.JButton createbtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
     private java.awt.PopupMenu popupMenu1;
     private java.awt.PopupMenu popupMenu2;
     // End of variables declaration//GEN-END:variables
