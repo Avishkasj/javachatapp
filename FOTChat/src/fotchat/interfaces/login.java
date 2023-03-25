@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package fotchat.interfaces;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 
 
@@ -15,7 +17,8 @@ public class login extends javax.swing.JFrame {
     
     public login() {
         initComponents();
-        
+        new ChatBall(this).setVisible(true);
+
         Dimension screen_size = Toolkit.getDefaultToolkit().getScreenSize();
         setLocation(screen_size.width - 425, getY());
 
