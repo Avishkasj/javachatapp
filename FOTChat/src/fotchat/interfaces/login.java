@@ -4,57 +4,14 @@
  */
 package fotchat.interfaces;
 
-import app.dbmanager.DBManager;
-import app.interfaces.ChatBall;
-import app.interfaces.chatUser;
-import app.pojos.Groups;
-import app.pojos.User;
-import app.services.Chat;
-import app.services.ChatService;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.util.List;
-import java.awt.Toolkit;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.rmi.AlreadyBoundException;
-import java.rmi.NotBoundException;
-import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollBar;
-import javax.swing.filechooser.FileNameExtensionFilter;
+
 
 public class login extends javax.swing.JFrame {
 
     /**
      * Creates new form login
      */
-    Registry reg;
-    Chat chat;
-
-    static int x, yy;
-    static ChatBall chatBall;
-    int id;
-    chatUser u;
+  
     
     public login() {
         initComponents();
@@ -63,17 +20,7 @@ public class login extends javax.swing.JFrame {
         setLocation(screen_size.width - 425, getY());
 
         //start
-        signin_panel.setVisible(true);
-        signup_panel.setVisible(false);
-        forgot_password_panel.setVisible(false);
-        chat_list_panel.setVisible(false);
-        chat_body_panel.setVisible(false);
-        setting_panel.setVisible(false);
-        update_panel.setVisible(false);
-        update_pwd_panel.setVisible(false);
-        admin_panel.setVisible(false);
-
-        signinDefault();
+      
     }
 
     
@@ -192,22 +139,16 @@ public class login extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
                                      
-        if (username.getText().trim().equalsIgnoreCase("username")) {
-            username.setText(null);
-        }
+       
     
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        if (password.getText().trim().equalsIgnoreCase("password")) {
-            password.setText(null);
-            password.setEchoChar('*');
-        }        // TODO add your handling code here:
+            // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            signinLink.setVisible(false);
-            signinLinkHover.setVisible(true);        // TODO add your handling code here:
+            // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
