@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hibernate-commons-annotations-4.0.4.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../Examples/ChatApp/dist/lib/hibernate-commons-annotations-4.0.4.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
