@@ -160,8 +160,6 @@ public class Login extends javax.swing.JFrame {
         signup_username_line2 = new javax.swing.JLabel();
         update_nickname = new javax.swing.JTextField();
         success_msg1 = new javax.swing.JLabel();
-        signup_copyrights2 = new javax.swing.JLabel();
-        signup_footer2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         success_update_msg = new javax.swing.JLabel();
@@ -916,7 +914,7 @@ public class Login extends javax.swing.JFrame {
         });
         update_pwd_panel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, -1, -1));
 
-        update_panel.setBackground(new java.awt.Color(28, 36, 47));
+        update_panel.setBackground(new java.awt.Color(204, 204, 255));
         update_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         update_profile_pic1.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
@@ -932,7 +930,6 @@ public class Login extends javax.swing.JFrame {
         });
         update_panel.add(update_profile_pic1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 120, 120));
 
-        update_email.setBackground(new java.awt.Color(28, 36, 47));
         update_email.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         update_email.setForeground(new java.awt.Color(111, 117, 124));
         update_email.setText("Email");
@@ -958,7 +955,6 @@ public class Login extends javax.swing.JFrame {
         signup_username_line2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         update_panel.add(signup_username_line2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, -1, 10));
 
-        update_nickname.setBackground(new java.awt.Color(28, 36, 47));
         update_nickname.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         update_nickname.setForeground(new java.awt.Color(111, 117, 124));
         update_nickname.setText("Nick name");
@@ -980,15 +976,6 @@ public class Login extends javax.swing.JFrame {
         success_msg1.setForeground(new java.awt.Color(206, 47, 131));
         success_msg1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         update_panel.add(success_msg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 280, -1));
-
-        signup_copyrights2.setFont(new java.awt.Font("Bookman Old Style", 0, 10)); // NOI18N
-        signup_copyrights2.setForeground(new java.awt.Color(255, 255, 255));
-        signup_copyrights2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        signup_copyrights2.setText("<html><center>Copyrights &copy; 2020 Team Semicolon<br>All rights reserved</center></html>");
-        update_panel.add(signup_copyrights2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 360, 30));
-
-        signup_footer2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/footer.gif"))); // NOI18N
-        update_panel.add(signup_footer2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 375, 130));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 51, 102));
@@ -2539,7 +2526,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel signup_btn;
     private javax.swing.JLabel signup_copyrights;
     private javax.swing.JLabel signup_copyrights1;
-    private javax.swing.JLabel signup_copyrights2;
     private javax.swing.JLabel signup_copyrights3;
     private javax.swing.JTextField signup_email;
     private javax.swing.JLabel signup_email_line;
@@ -2551,7 +2537,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel signup_eye_open_icon;
     private javax.swing.JLabel signup_footer;
     private javax.swing.JLabel signup_footer1;
-    private javax.swing.JLabel signup_footer2;
     private javax.swing.JLabel signup_footer3;
     private javax.swing.JTextField signup_nickname;
     private javax.swing.JLabel signup_nickname_line;
