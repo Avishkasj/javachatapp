@@ -178,8 +178,6 @@ public class Login extends javax.swing.JFrame {
         g_name_text = new javax.swing.JTextField();
         username_line1 = new javax.swing.JLabel();
         create_group_btn = new javax.swing.JLabel();
-        signin_copyrights1 = new javax.swing.JLabel();
-        signin_footer1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         group_creation_state = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -1070,10 +1068,9 @@ public class Login extends javax.swing.JFrame {
         });
         admin_panel.add(logout1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, -1, 30));
 
-        group_create_panel.setBackground(new java.awt.Color(28, 36, 47));
+        group_create_panel.setBackground(new java.awt.Color(204, 204, 255));
         group_create_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        g_name_text.setBackground(new java.awt.Color(28, 36, 47));
         g_name_text.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         g_name_text.setForeground(new java.awt.Color(111, 117, 124));
         g_name_text.setAutoscrolls(false);
@@ -1103,15 +1100,6 @@ public class Login extends javax.swing.JFrame {
         });
         group_create_panel.add(create_group_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 200, 30));
 
-        signin_copyrights1.setFont(new java.awt.Font("Bookman Old Style", 0, 10)); // NOI18N
-        signin_copyrights1.setForeground(new java.awt.Color(255, 255, 255));
-        signin_copyrights1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        signin_copyrights1.setText("<html><center>Copyrights &copy; 2020 Team Semicolon<br>All rights reserved</center></html>");
-        group_create_panel.add(signin_copyrights1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 360, 30));
-
-        signin_footer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/footer.gif"))); // NOI18N
-        group_create_panel.add(signin_footer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 375, 130));
-
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Group Description");
@@ -1126,7 +1114,6 @@ public class Login extends javax.swing.JFrame {
         jLabel7.setText("Group name");
         group_create_panel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, -1, -1));
 
-        g_dec_textArea.setBackground(new java.awt.Color(28, 36, 47));
         g_dec_textArea.setColumns(20);
         g_dec_textArea.setForeground(new java.awt.Color(255, 255, 255));
         g_dec_textArea.setRows(5);
@@ -2544,9 +2531,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField sign_up_link;
     private javax.swing.JTextField sign_up_link_hover;
     private javax.swing.JLabel signin_btn;
-    private javax.swing.JLabel signin_copyrights1;
     private javax.swing.JLabel signin_error;
-    private javax.swing.JLabel signin_footer1;
     private javax.swing.JTextField signin_link;
     private javax.swing.JTextField signin_link_hover;
     private javax.swing.JTextField signin_link_hover1;
