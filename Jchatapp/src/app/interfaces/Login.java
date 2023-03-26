@@ -764,7 +764,7 @@ public class Login extends javax.swing.JFrame {
 
         chat_list_panel.add(chat_list_scrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 340, 410));
 
-        setting_panel.setBackground(new java.awt.Color(28, 36, 47));
+        setting_panel.setBackground(new java.awt.Color(204, 204, 255));
         setting_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         setting_lable.setFont(new java.awt.Font("Bookman Old Style", 1, 24)); // NOI18N
