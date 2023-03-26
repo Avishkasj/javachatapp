@@ -3,80 +3,45 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package fotchat.interfaces;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 import app.dbmanager.DBManager;
 import app.interfaces.ChatBall;
 import app.interfaces.chatUser;
-import app.pojos.Groups;
 import app.pojos.User;
 import app.services.Chat;
-import app.services.ChatService;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.util.List;
-import java.awt.Toolkit;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.rmi.AlreadyBoundException;
-import java.rmi.NotBoundException;
-import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollBar;
-import javax.swing.filechooser.FileNameExtensionFilter;
+import java.util.List;
+
+
 
 public class login extends javax.swing.JFrame {
 
-    /**
-     * Creates new form login
-     */
     Registry reg;
     Chat chat;
 
     static int x, yy;
-    static ChatBall chatBall;
+    static ChatBall ChatBall;
     int id;
     chatUser u;
+    /**
+     * Creates new form login
+     */
+  
     
     public login() {
         initComponents();
-        
+        new ChatBall(this).setVisible(true);
+
         Dimension screen_size = Toolkit.getDefaultToolkit().getScreenSize();
         setLocation(screen_size.width - 425, getY());
 
         //start
-        signin_panel.setVisible(true);
-        signup_panel.setVisible(false);
-        forgot_password_panel.setVisible(false);
-        chat_list_panel.setVisible(false);
-        chat_body_panel.setVisible(false);
-        setting_panel.setVisible(false);
-        update_panel.setVisible(false);
-        update_pwd_panel.setVisible(false);
-        admin_panel.setVisible(false);
-
-        signinDefault();
+      
     }
-
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -96,6 +61,7 @@ public class login extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("f2");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 102));
 
@@ -109,12 +75,22 @@ public class login extends javax.swing.JFrame {
         jLabel3.setText("User name");
 
         jTextField1.setName("Uname"); // NOI18N
+        jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField1MouseClicked(evt);
+            }
+        });
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
 
+        jPasswordField1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPasswordField1MouseClicked(evt);
+            }
+        });
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
@@ -122,6 +98,11 @@ public class login extends javax.swing.JFrame {
         });
 
         jButton1.setText("LOGIN");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton1MouseEntered(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -192,23 +173,111 @@ public class login extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
                                      
-        if (username.getText().trim().equalsIgnoreCase("username")) {
-            username.setText(null);
-        }
+       
     
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+            // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+            // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
+        if (username.getText().trim().equalsIgnoreCase("username")) {
+            username.setText(null);
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1MouseClicked
+
+    private void jPasswordField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField1MouseClicked
         if (password.getText().trim().equalsIgnoreCase("password")) {
             password.setText(null);
             password.setEchoChar('*');
         }        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_jPasswordField1MouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            signinLink.setVisible(false);
-            signinLinkHover.setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
+        signinLink.setVisible(false);
+        signinLinkHover.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1MouseEntered
+
+    
+    
+    
+    
+    //Login button ---------------------------
+    
+     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {                                        
+
+        String user_name = username.getText();
+        String user_pwd = password.getText();
+
+        ArrayList<String> error = validatelogin(user_name, user_pwd);
+
+        if (error.isEmpty() == false) {
+            signin_error.setText(error.get(0));
+        } else {
+
+            List data = DBManager.getDBM().login(user_name, user_pwd);
+            Iterator i = data.iterator();
+            if (i.hasNext()) {
+                User user = (User) i.next();
+                if (user.getRoleId() == 1) {
+                    //admin
+                    System.out.println(user.getUsername());
+
+                    loadGroup(true);
+                    adminDefault();
+
+                } else {
+                    //
+                    chatListDefault();
+
+                    u = new chatUser(user.getId(), user.getUsername(), user.getNickname(), user.getEmail());
+
+                    loadClientGroups();
+                    this.start_client();
+                }
+
+                this.id = user.getId();
+                update_nickname.setText(user.getNickname());
+                update_email.setText(user.getEmail());
+
+            } else {
+                System.out.println("Username or Password Incorrect");
+                signin_error.setText("Username or Password Incorrect");
+            }
+
+        }
+
+
+    }
+     
+      public void signinDefault() {
+        jButton1.setVisible(true);
+       jPasswordField1.setEchoChar((char) 0);
+        
+
+    }
+      //VALIDATE LOGIN
+      
+       public ArrayList<String> validatelogin(String username, String password) {
+        ArrayList<String> errors = new ArrayList<String>();
+
+        if ("Username".equals(username) || "".equals(username)) {
+            errors.add("Username is requird");
+        }
+
+        if ("Password".equals(password) || "".equals(password)) {
+            errors.add("Password is requird");
+        }
+
+        return errors;
+    }
+      
+      
 
     /**
      * @param args the command line arguments
