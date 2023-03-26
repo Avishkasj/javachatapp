@@ -111,9 +111,6 @@ public class ChatUI extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         forgot_password_panel = new javax.swing.JPanel();
-        fp_logo = new javax.swing.JLabel();
-        fp_resend_code = new javax.swing.JLabel();
-        fp_description = new javax.swing.JLabel();
         fp_recovery_code = new javax.swing.JTextField();
         fp_recovery_code_line = new javax.swing.JLabel();
         fp_confirm_btn = new javax.swing.JLabel();
@@ -541,21 +538,6 @@ public class ChatUI extends javax.swing.JFrame {
         forgot_password_panel.setBackground(new java.awt.Color(204, 204, 255));
         forgot_password_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        fp_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/logo_pink.png"))); // NOI18N
-        forgot_password_panel.add(fp_logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 120, 120));
-
-        fp_resend_code.setFont(new java.awt.Font("Bookman Old Style", 1, 11)); // NOI18N
-        fp_resend_code.setForeground(new java.awt.Color(206, 47, 131));
-        fp_resend_code.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        fp_resend_code.setText("resend code.");
-        fp_resend_code.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        forgot_password_panel.add(fp_resend_code, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 80, -1));
-
-        fp_description.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
-        fp_description.setForeground(new java.awt.Color(111, 117, 124));
-        fp_description.setText("<html>We've sent a recovery code to your email.<br>Please enter the code to change your password. If you haven't received any mail, please</html>");
-        forgot_password_panel.add(fp_description, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 240, 70));
-
         fp_recovery_code.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         fp_recovery_code.setForeground(new java.awt.Color(111, 117, 124));
         fp_recovery_code.setText("Recovery code");
@@ -570,21 +552,21 @@ public class ChatUI extends javax.swing.JFrame {
                 fp_recovery_codeMouseClicked(evt);
             }
         });
-        forgot_password_panel.add(fp_recovery_code, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 240, 20));
+        forgot_password_panel.add(fp_recovery_code, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 240, 20));
 
         fp_recovery_code_line.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/hrline.png"))); // NOI18N
         fp_recovery_code_line.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        forgot_password_panel.add(fp_recovery_code_line, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, 10));
+        forgot_password_panel.add(fp_recovery_code_line, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, 10));
 
         fp_confirm_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/confirm_pink.png"))); // NOI18N
         fp_confirm_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        forgot_password_panel.add(fp_confirm_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 200, 30));
+        forgot_password_panel.add(fp_confirm_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 200, 30));
 
         fp_error.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         fp_error.setForeground(new java.awt.Color(206, 47, 131));
         fp_error.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         fp_error.setText("username and password are required");
-        forgot_password_panel.add(fp_error, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 310, -1));
+        forgot_password_panel.add(fp_error, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 310, -1));
 
         fp_signin_link.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         fp_signin_link.setForeground(new java.awt.Color(111, 117, 124));
@@ -596,7 +578,7 @@ public class ChatUI extends javax.swing.JFrame {
                 fp_signin_linkMouseEntered(evt);
             }
         });
-        forgot_password_panel.add(fp_signin_link, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, 50, 20));
+        forgot_password_panel.add(fp_signin_link, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 50, 20));
 
         fp_signin_link_hover.setEditable(false);
         fp_signin_link_hover.setBackground(new java.awt.Color(28, 36, 47));
@@ -613,7 +595,7 @@ public class ChatUI extends javax.swing.JFrame {
                 fp_signin_link_hoverMouseExited(evt);
             }
         });
-        forgot_password_panel.add(fp_signin_link_hover, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, 50, 20));
+        forgot_password_panel.add(fp_signin_link_hover, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 50, 20));
 
         chat_body_panel.setBackground(new java.awt.Color(204, 204, 255));
         chat_body_panel.setPreferredSize(new java.awt.Dimension(375, 500));
@@ -844,7 +826,7 @@ public class ChatUI extends javax.swing.JFrame {
                 update_profile_pic1MouseClicked(evt);
             }
         });
-        update_panel.add(update_profile_pic1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 120, 120));
+        update_panel.add(update_profile_pic1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 120, 120));
 
         update_email.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         update_email.setForeground(new java.awt.Color(111, 117, 124));
@@ -860,15 +842,15 @@ public class ChatUI extends javax.swing.JFrame {
                 update_emailMouseClicked(evt);
             }
         });
-        update_panel.add(update_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 240, 20));
+        update_panel.add(update_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 240, 20));
 
         signup_email_line2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/hrline.png"))); // NOI18N
         signup_email_line2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        update_panel.add(signup_email_line2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, 10));
+        update_panel.add(signup_email_line2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, 10));
 
         signup_username_line2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/hrline.png"))); // NOI18N
         signup_username_line2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        update_panel.add(signup_username_line2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, -1, 10));
+        update_panel.add(signup_username_line2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, -1, 10));
 
         update_nickname.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         update_nickname.setForeground(new java.awt.Color(111, 117, 124));
@@ -884,7 +866,7 @@ public class ChatUI extends javax.swing.JFrame {
                 update_nicknameMouseClicked(evt);
             }
         });
-        update_panel.add(update_nickname, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 240, 20));
+        update_panel.add(update_nickname, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 240, 20));
 
         success_msg1.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         success_msg1.setForeground(new java.awt.Color(206, 47, 131));
@@ -910,7 +892,7 @@ public class ChatUI extends javax.swing.JFrame {
                 jLabel2MouseClicked(evt);
             }
         });
-        update_panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, -1));
+        update_panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, -1, -1));
 
         success_update_msg.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         success_update_msg.setForeground(new java.awt.Color(204, 0, 102));
@@ -924,7 +906,7 @@ public class ChatUI extends javax.swing.JFrame {
                 jLabel3MouseClicked(evt);
             }
         });
-        update_panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 310, 70));
+        update_panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 280, 310, 70));
 
         admin_panel.setBackground(new java.awt.Color(204, 204, 255));
         admin_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -2323,12 +2305,9 @@ public class ChatUI extends javax.swing.JFrame {
     private javax.swing.JLabel eye_open_icon;
     private javax.swing.JPanel forgot_password_panel;
     private javax.swing.JLabel fp_confirm_btn;
-    private javax.swing.JLabel fp_description;
     private javax.swing.JLabel fp_error;
-    private javax.swing.JLabel fp_logo;
     private javax.swing.JTextField fp_recovery_code;
     private javax.swing.JLabel fp_recovery_code_line;
-    private javax.swing.JLabel fp_resend_code;
     private javax.swing.JTextField fp_signin_link;
     private javax.swing.JTextField fp_signin_link_hover;
     private javax.swing.JTextArea g_dec_textArea;
