@@ -21,7 +21,7 @@ public class Chat_ball extends javax.swing.JFrame {
     
     static int yy;
 
-    public Chat_ball(Login login) {
+    public Chat_ball(ChatUI login) {
         initComponents();
         
         setBackground(new Color(0.0f,0.0f,0.0f,0.0f));
@@ -31,7 +31,7 @@ public class Chat_ball extends javax.swing.JFrame {
         
         this.login = login;
     }
-    Login login;
+    ChatUI login;
     
     public Chat_ball() {
         
