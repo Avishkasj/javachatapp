@@ -47,6 +47,8 @@ public class ChatService extends UnicastRemoteObject implements Chat {
             out.flush();
             out.close();
             fileOut.close();
+            
+            
 
         } catch (FileNotFoundException e) {
             System.out.println(e);
