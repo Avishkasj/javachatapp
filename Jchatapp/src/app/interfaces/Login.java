@@ -685,7 +685,7 @@ public class Login extends javax.swing.JFrame {
         fp_footer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/footer.gif"))); // NOI18N
         forgot_password_panel.add(fp_footer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 375, 130));
 
-        chat_body_panel.setBackground(new java.awt.Color(28, 36, 47));
+        chat_body_panel.setBackground(new java.awt.Color(204, 204, 255));
         chat_body_panel.setPreferredSize(new java.awt.Dimension(375, 500));
         chat_body_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -712,13 +712,12 @@ public class Login extends javax.swing.JFrame {
         });
         chat_body_panel.add(client_logout2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 30, 30));
 
-        chat_background.setBackground(new java.awt.Color(28, 36, 47));
+        chat_background.setBackground(new java.awt.Color(255, 255, 255));
         chat_background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         msgScrollPane.setViewportView(chat_background);
 
         chat_body_panel.add(msgScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 78, 340, 350));
 
-        msg_typer.setBackground(new java.awt.Color(28, 36, 47));
         msg_typer.setForeground(new java.awt.Color(255, 255, 255));
         msg_typer.setBorder(null);
         msg_typer.addKeyListener(new java.awt.event.KeyAdapter() {
