@@ -164,8 +164,6 @@ public class ChatUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         admin_panel = new javax.swing.JPanel();
         signup_error1 = new javax.swing.JLabel();
-        signup_copyrights3 = new javax.swing.JLabel();
-        signup_footer3 = new javax.swing.JLabel();
         create_new_chat_btn = new javax.swing.JLabel();
         group_scrollPane = new javax.swing.JScrollPane();
         group_panel = new javax.swing.JPanel();
@@ -250,7 +248,6 @@ public class ChatUI extends javax.swing.JFrame {
         username.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         username.setForeground(new java.awt.Color(111, 117, 124));
         username.setAutoscrolls(false);
-        username.setBorder(null);
         username.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 usernameFocusLost(evt);
@@ -269,7 +266,6 @@ public class ChatUI extends javax.swing.JFrame {
 
         password.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         password.setForeground(new java.awt.Color(111, 117, 124));
-        password.setBorder(null);
         password.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 passwordFocusLost(evt);
@@ -328,7 +324,6 @@ public class ChatUI extends javax.swing.JFrame {
         sign_up_link.setForeground(new java.awt.Color(153, 0, 153));
         sign_up_link.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         sign_up_link.setText("Sign Up");
-        sign_up_link.setBorder(null);
         sign_up_link.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         sign_up_link.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -348,7 +343,6 @@ public class ChatUI extends javax.swing.JFrame {
         sign_up_link_hover.setForeground(new java.awt.Color(206, 47, 131));
         sign_up_link_hover.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         sign_up_link_hover.setText("Sign Up");
-        sign_up_link_hover.setBorder(null);
         sign_up_link_hover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         sign_up_link_hover.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -390,7 +384,6 @@ public class ChatUI extends javax.swing.JFrame {
         signup_email.setForeground(new java.awt.Color(111, 117, 124));
         signup_email.setText("Email");
         signup_email.setAutoscrolls(false);
-        signup_email.setBorder(null);
         signup_email.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 signup_emailFocusLost(evt);
@@ -411,7 +404,6 @@ public class ChatUI extends javax.swing.JFrame {
         signup_username.setForeground(new java.awt.Color(111, 117, 124));
         signup_username.setText("Username");
         signup_username.setAutoscrolls(false);
-        signup_username.setBorder(null);
         signup_username.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 signup_usernameFocusLost(evt);
@@ -431,7 +423,6 @@ public class ChatUI extends javax.swing.JFrame {
         signup_password.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         signup_password.setForeground(new java.awt.Color(111, 117, 124));
         signup_password.setText("Password");
-        signup_password.setBorder(null);
         signup_password.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 signup_passwordFocusLost(evt);
@@ -474,7 +465,6 @@ public class ChatUI extends javax.swing.JFrame {
         signup_nickname.setForeground(new java.awt.Color(111, 117, 124));
         signup_nickname.setText("Nick name");
         signup_nickname.setAutoscrolls(false);
-        signup_nickname.setBorder(null);
         signup_nickname.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 signup_nicknameFocusLost(evt);
@@ -505,7 +495,6 @@ public class ChatUI extends javax.swing.JFrame {
         signin_link.setForeground(new java.awt.Color(111, 117, 124));
         signin_link.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         signin_link.setText("Sign In");
-        signin_link.setBorder(null);
         signin_link.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         signin_link.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -528,7 +517,6 @@ public class ChatUI extends javax.swing.JFrame {
         signin_link_hover.setForeground(new java.awt.Color(206, 47, 131));
         signin_link_hover.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         signin_link_hover.setText("Sign In");
-        signin_link_hover.setBorder(null);
         signin_link_hover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         signin_link_hover.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -574,7 +562,6 @@ public class ChatUI extends javax.swing.JFrame {
         fp_recovery_code.setForeground(new java.awt.Color(111, 117, 124));
         fp_recovery_code.setText("Recovery code");
         fp_recovery_code.setAutoscrolls(false);
-        fp_recovery_code.setBorder(null);
         fp_recovery_code.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 fp_recovery_codeFocusLost(evt);
@@ -605,7 +592,6 @@ public class ChatUI extends javax.swing.JFrame {
         fp_signin_link.setForeground(new java.awt.Color(111, 117, 124));
         fp_signin_link.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         fp_signin_link.setText("Sign In");
-        fp_signin_link.setBorder(null);
         fp_signin_link.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         fp_signin_link.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -620,7 +606,6 @@ public class ChatUI extends javax.swing.JFrame {
         fp_signin_link_hover.setForeground(new java.awt.Color(206, 47, 131));
         fp_signin_link_hover.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         fp_signin_link_hover.setText("Sign In");
-        fp_signin_link_hover.setBorder(null);
         fp_signin_link_hover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         fp_signin_link_hover.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -666,7 +651,6 @@ public class ChatUI extends javax.swing.JFrame {
         chat_body_panel.add(msgScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 78, 340, 350));
 
         msg_typer.setForeground(new java.awt.Color(255, 255, 255));
-        msg_typer.setBorder(null);
         msg_typer.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 msg_typerKeyPressed(evt);
@@ -753,7 +737,6 @@ public class ChatUI extends javax.swing.JFrame {
         new_pwd.setForeground(new java.awt.Color(111, 117, 124));
         new_pwd.setText("New Passowrd");
         new_pwd.setAutoscrolls(false);
-        new_pwd.setBorder(null);
         new_pwd.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 new_pwdFocusLost(evt);
@@ -775,7 +758,6 @@ public class ChatUI extends javax.swing.JFrame {
         new_pwd2.setForeground(new java.awt.Color(111, 117, 124));
         new_pwd2.setText("New Corfirm Password");
         new_pwd2.setAutoscrolls(false);
-        new_pwd2.setBorder(null);
         new_pwd2.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 new_pwd2FocusLost(evt);
@@ -801,7 +783,6 @@ public class ChatUI extends javax.swing.JFrame {
         current_pwd.setForeground(new java.awt.Color(111, 117, 124));
         current_pwd.setText("Current Password");
         current_pwd.setAutoscrolls(false);
-        current_pwd.setBorder(null);
         current_pwd.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 current_pwdFocusLost(evt);
@@ -825,7 +806,6 @@ public class ChatUI extends javax.swing.JFrame {
         signin_link_hover1.setForeground(new java.awt.Color(206, 47, 131));
         signin_link_hover1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         signin_link_hover1.setText("Home");
-        signin_link_hover1.setBorder(null);
         signin_link_hover1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         signin_link_hover1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -880,7 +860,6 @@ public class ChatUI extends javax.swing.JFrame {
         update_email.setForeground(new java.awt.Color(111, 117, 124));
         update_email.setText("Email");
         update_email.setAutoscrolls(false);
-        update_email.setBorder(null);
         update_email.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 update_emailFocusLost(evt);
@@ -905,7 +884,6 @@ public class ChatUI extends javax.swing.JFrame {
         update_nickname.setForeground(new java.awt.Color(111, 117, 124));
         update_nickname.setText("Nick name");
         update_nickname.setAutoscrolls(false);
-        update_nickname.setBorder(null);
         update_nickname.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 update_nicknameFocusLost(evt);
@@ -958,22 +936,13 @@ public class ChatUI extends javax.swing.JFrame {
         });
         update_panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 200, 30));
 
-        admin_panel.setBackground(new java.awt.Color(28, 36, 47));
+        admin_panel.setBackground(new java.awt.Color(204, 204, 255));
         admin_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         signup_error1.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         signup_error1.setForeground(new java.awt.Color(206, 47, 131));
         signup_error1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         admin_panel.add(signup_error1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 310, 20));
-
-        signup_copyrights3.setFont(new java.awt.Font("Bookman Old Style", 0, 10)); // NOI18N
-        signup_copyrights3.setForeground(new java.awt.Color(255, 255, 255));
-        signup_copyrights3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        signup_copyrights3.setText("<html><center>Copyrights &copy; 2020 Team Semicolon<br>All rights reserved</center></html>");
-        admin_panel.add(signup_copyrights3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 360, 30));
-
-        signup_footer3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/footer.gif"))); // NOI18N
-        admin_panel.add(signup_footer3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 375, 130));
 
         create_new_chat_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/create new.png"))); // NOI18N
         create_new_chat_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -984,9 +953,7 @@ public class ChatUI extends javax.swing.JFrame {
         });
         admin_panel.add(create_new_chat_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 200, 30));
 
-        group_scrollPane.setBorder(null);
-
-        group_panel.setBackground(new java.awt.Color(28, 36, 47));
+        group_panel.setBackground(new java.awt.Color(255, 255, 255));
         group_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         group_scrollPane.setViewportView(group_panel);
 
@@ -1007,7 +974,6 @@ public class ChatUI extends javax.swing.JFrame {
         g_name_text.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         g_name_text.setForeground(new java.awt.Color(111, 117, 124));
         g_name_text.setAutoscrolls(false);
-        g_name_text.setBorder(null);
         g_name_text.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 g_name_textFocusLost(evt);
@@ -2418,7 +2384,6 @@ public class ChatUI extends javax.swing.JFrame {
     private javax.swing.JPanel signin_panel;
     private javax.swing.JLabel signup_btn;
     private javax.swing.JLabel signup_copyrights1;
-    private javax.swing.JLabel signup_copyrights3;
     private javax.swing.JTextField signup_email;
     private javax.swing.JLabel signup_email_line;
     private javax.swing.JLabel signup_email_line1;
@@ -2428,7 +2393,6 @@ public class ChatUI extends javax.swing.JFrame {
     private javax.swing.JLabel signup_eye_close_icon;
     private javax.swing.JLabel signup_eye_open_icon;
     private javax.swing.JLabel signup_footer1;
-    private javax.swing.JLabel signup_footer3;
     private javax.swing.JTextField signup_nickname;
     private javax.swing.JLabel signup_nickname_line;
     private javax.swing.JLabel signup_nickname_line1;
