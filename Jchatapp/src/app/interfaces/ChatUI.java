@@ -85,8 +85,6 @@ public class ChatUI extends javax.swing.JFrame {
         eye_close_icon = new javax.swing.JLabel();
         signin_btn = new javax.swing.JLabel();
         signin_error = new javax.swing.JLabel();
-        forgot_password = new javax.swing.JTextField();
-        forgot_password_hover = new javax.swing.JTextField();
         sign_up_link = new javax.swing.JTextField();
         sign_up_link_hover = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -325,47 +323,9 @@ public class ChatUI extends javax.swing.JFrame {
         signin_error.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         signin_panel.add(signin_error, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 310, 20));
 
-        forgot_password.setEditable(false);
-        forgot_password.setBackground(new java.awt.Color(28, 36, 47));
-        forgot_password.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
-        forgot_password.setForeground(new java.awt.Color(111, 117, 124));
-        forgot_password.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        forgot_password.setText("Forgot Password ?");
-        forgot_password.setBorder(null);
-        forgot_password.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        forgot_password.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                forgot_passwordMouseEntered(evt);
-            }
-        });
-        signin_panel.add(forgot_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 110, 20));
-
-        forgot_password_hover.setEditable(false);
-        forgot_password_hover.setBackground(new java.awt.Color(28, 36, 47));
-        forgot_password_hover.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
-        forgot_password_hover.setForeground(new java.awt.Color(206, 47, 131));
-        forgot_password_hover.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        forgot_password_hover.setText("Forgot Password ?");
-        forgot_password_hover.setBorder(null);
-        forgot_password_hover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        forgot_password_hover.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                forgot_password_hoverMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                forgot_password_hoverMouseExited(evt);
-            }
-        });
-        forgot_password_hover.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                forgot_password_hoverActionPerformed(evt);
-            }
-        });
-        signin_panel.add(forgot_password_hover, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 110, 20));
-
-        sign_up_link.setBackground(new java.awt.Color(28, 36, 47));
-        sign_up_link.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
-        sign_up_link.setForeground(new java.awt.Color(111, 117, 124));
+        sign_up_link.setBackground(new java.awt.Color(204, 204, 255));
+        sign_up_link.setFont(new java.awt.Font("Bookman Old Style", 1, 14)); // NOI18N
+        sign_up_link.setForeground(new java.awt.Color(153, 0, 153));
         sign_up_link.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         sign_up_link.setText("Sign Up");
         sign_up_link.setBorder(null);
@@ -380,7 +340,7 @@ public class ChatUI extends javax.swing.JFrame {
                 sign_up_linkActionPerformed(evt);
             }
         });
-        signin_panel.add(sign_up_link, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, 50, 20));
+        signin_panel.add(sign_up_link, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, 70, 30));
 
         sign_up_link_hover.setEditable(false);
         sign_up_link_hover.setBackground(new java.awt.Color(28, 36, 47));
@@ -1229,20 +1189,6 @@ public class ChatUI extends javax.swing.JFrame {
         //this.setState(ICONIFIED);
     }//GEN-LAST:event_minimizeMouseClicked
 
-    private void forgot_password_hoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_forgot_password_hoverActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_forgot_password_hoverActionPerformed
-
-    private void forgot_passwordMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgot_passwordMouseEntered
-        forgot_password.setVisible(false);
-        forgot_password_hover.setVisible(true);
-    }//GEN-LAST:event_forgot_passwordMouseEntered
-
-    private void forgot_password_hoverMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgot_password_hoverMouseExited
-        forgot_password_hover.setVisible(false);
-        forgot_password.setVisible(true);
-    }//GEN-LAST:event_forgot_password_hoverMouseExited
-
     private void sign_up_linkMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sign_up_linkMouseEntered
         sign_up_link.setVisible(false);
         sign_up_link_hover.setVisible(true);
@@ -1454,10 +1400,6 @@ public class ChatUI extends javax.swing.JFrame {
             fp_recovery_code.setText(null);
         }
     }//GEN-LAST:event_fp_recovery_codeMouseClicked
-
-    private void forgot_password_hoverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgot_password_hoverMouseClicked
-        forgot_password_default();
-    }//GEN-LAST:event_forgot_password_hoverMouseClicked
 
     private void new_pwdFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_new_pwdFocusLost
         // TODO add your handling code here:
@@ -2420,8 +2362,6 @@ public class ChatUI extends javax.swing.JFrame {
     private javax.swing.JTextField current_pwd;
     private javax.swing.JLabel eye_close_icon;
     private javax.swing.JLabel eye_open_icon;
-    private javax.swing.JTextField forgot_password;
-    private javax.swing.JTextField forgot_password_hover;
     private javax.swing.JPanel forgot_password_panel;
     private javax.swing.JLabel fp_confirm_btn;
     private javax.swing.JLabel fp_description;
