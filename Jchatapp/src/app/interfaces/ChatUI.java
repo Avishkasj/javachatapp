@@ -148,8 +148,6 @@ public class ChatUI extends javax.swing.JFrame {
         current_pwd = new javax.swing.JTextField();
         success_msg = new javax.swing.JLabel();
         signin_link_hover1 = new javax.swing.JTextField();
-        signup_copyrights1 = new javax.swing.JLabel();
-        signup_footer1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         update_panel = new javax.swing.JPanel();
         update_profile_pic1 = new javax.swing.JLabel();
@@ -624,16 +622,20 @@ public class ChatUI extends javax.swing.JFrame {
         chatlist_title2.setFont(new java.awt.Font("Bookman Old Style", 1, 24)); // NOI18N
         chatlist_title2.setForeground(new java.awt.Color(111, 117, 124));
         chatlist_title2.setText("  Chats");
-        chat_body_panel.add(chatlist_title2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 300, 30));
+        chat_body_panel.add(chatlist_title2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 150, 30));
 
-        chatlist_setting2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/setting_pink.png"))); // NOI18N
+        chatlist_setting2.setBackground(new java.awt.Color(204, 0, 204));
+        chatlist_setting2.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        chatlist_setting2.setForeground(new java.awt.Color(102, 0, 102));
+        chatlist_setting2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chatlist_setting2.setText("Profile");
         chatlist_setting2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         chatlist_setting2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 chatlist_setting2MouseClicked(evt);
             }
         });
-        chat_body_panel.add(chatlist_setting2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 30, 30));
+        chat_body_panel.add(chatlist_setting2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 70, 30));
 
         client_logout2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/client_logout.png"))); // NOI18N
         client_logout2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -650,7 +652,7 @@ public class ChatUI extends javax.swing.JFrame {
 
         chat_body_panel.add(msgScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 78, 340, 350));
 
-        msg_typer.setForeground(new java.awt.Color(255, 255, 255));
+        msg_typer.setForeground(new java.awt.Color(0, 153, 102));
         msg_typer.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 msg_typerKeyPressed(evt);
@@ -729,10 +731,9 @@ public class ChatUI extends javax.swing.JFrame {
         jLabel11.setText("Admin");
         setting_panel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
-        update_pwd_panel.setBackground(new java.awt.Color(28, 36, 47));
+        update_pwd_panel.setBackground(new java.awt.Color(204, 204, 255));
         update_pwd_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        new_pwd.setBackground(new java.awt.Color(28, 36, 47));
         new_pwd.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         new_pwd.setForeground(new java.awt.Color(111, 117, 124));
         new_pwd.setText("New Passowrd");
@@ -753,7 +754,6 @@ public class ChatUI extends javax.swing.JFrame {
         signup_email_line1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         update_pwd_panel.add(signup_email_line1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, 10));
 
-        new_pwd2.setBackground(new java.awt.Color(28, 36, 47));
         new_pwd2.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         new_pwd2.setForeground(new java.awt.Color(111, 117, 124));
         new_pwd2.setText("New Corfirm Password");
@@ -778,7 +778,6 @@ public class ChatUI extends javax.swing.JFrame {
         signup_nickname_line1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         update_pwd_panel.add(signup_nickname_line1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, -1, 10));
 
-        current_pwd.setBackground(new java.awt.Color(28, 36, 47));
         current_pwd.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         current_pwd.setForeground(new java.awt.Color(111, 117, 124));
         current_pwd.setText("Current Password");
@@ -801,7 +800,7 @@ public class ChatUI extends javax.swing.JFrame {
         update_pwd_panel.add(success_msg, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 280, -1));
 
         signin_link_hover1.setEditable(false);
-        signin_link_hover1.setBackground(new java.awt.Color(28, 36, 47));
+        signin_link_hover1.setBackground(new java.awt.Color(255, 255, 255));
         signin_link_hover1.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         signin_link_hover1.setForeground(new java.awt.Color(206, 47, 131));
         signin_link_hover1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -821,15 +820,6 @@ public class ChatUI extends javax.swing.JFrame {
             }
         });
         update_pwd_panel.add(signin_link_hover1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 50, 20));
-
-        signup_copyrights1.setFont(new java.awt.Font("Bookman Old Style", 0, 10)); // NOI18N
-        signup_copyrights1.setForeground(new java.awt.Color(255, 255, 255));
-        signup_copyrights1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        signup_copyrights1.setText("<html><center>Copyrights &copy; 2020 Team Semicolon<br>All rights reserved</center></html>");
-        update_pwd_panel.add(signup_copyrights1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 360, 30));
-
-        signup_footer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/footer.gif"))); // NOI18N
-        update_pwd_panel.add(signup_footer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 375, 130));
 
         jButton3.setText("change password");
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -910,7 +900,7 @@ public class ChatUI extends javax.swing.JFrame {
                 jLabel1MouseClicked(evt);
             }
         });
-        update_panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, -1, 20));
+        update_panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 20));
 
         jLabel2.setForeground(new java.awt.Color(255, 0, 102));
         jLabel2.setText("Change Password");
@@ -934,7 +924,7 @@ public class ChatUI extends javax.swing.JFrame {
                 jLabel3MouseClicked(evt);
             }
         });
-        update_panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 200, 30));
+        update_panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 310, 70));
 
         admin_panel.setBackground(new java.awt.Color(204, 204, 255));
         admin_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -951,22 +941,22 @@ public class ChatUI extends javax.swing.JFrame {
                 create_new_chat_btnMouseClicked(evt);
             }
         });
-        admin_panel.add(create_new_chat_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 200, 30));
+        admin_panel.add(create_new_chat_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 10, 320, -1));
 
         group_panel.setBackground(new java.awt.Color(255, 255, 255));
         group_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         group_scrollPane.setViewportView(group_panel);
 
-        admin_panel.add(group_scrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 340, 290));
+        admin_panel.add(group_scrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 340, 380));
 
-        logout1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/logout.png"))); // NOI18N
+        logout1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/client_logout.png"))); // NOI18N
         logout1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         logout1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 logout1MouseClicked(evt);
             }
         });
-        admin_panel.add(logout1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, -1, 30));
+        admin_panel.add(logout1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, 30));
 
         group_create_panel.setBackground(new java.awt.Color(204, 204, 255));
         group_create_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1020,14 +1010,14 @@ public class ChatUI extends javax.swing.JFrame {
 
         group_create_panel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 240, 60));
 
-        logout2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/logout.png"))); // NOI18N
+        logout2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/client_logout.png"))); // NOI18N
         logout2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         logout2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 logout2MouseClicked(evt);
             }
         });
-        group_create_panel.add(logout2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, -1, 30));
+        group_create_panel.add(logout2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, -1, 30));
 
         back1.setForeground(new java.awt.Color(255, 0, 102));
         back1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1038,7 +1028,7 @@ public class ChatUI extends javax.swing.JFrame {
                 back1MouseClicked(evt);
             }
         });
-        group_create_panel.add(back1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 40, -1));
+        group_create_panel.add(back1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 40, -1));
 
         layered_pane.setLayer(title_panel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         layered_pane.setLayer(signin_panel, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -1059,18 +1049,20 @@ public class ChatUI extends javax.swing.JFrame {
             .addComponent(title_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(signin_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(signup_panel, javax.swing.GroupLayout.DEFAULT_SIZE, 387, Short.MAX_VALUE))
+                .addGroup(layered_paneLayout.createSequentialGroup()
+                    .addComponent(signup_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 6, Short.MAX_VALUE)))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layered_paneLayout.createSequentialGroup()
                     .addComponent(forgot_password_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 12, Short.MAX_VALUE)))
+                    .addGap(0, 40, Short.MAX_VALUE)))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layered_paneLayout.createSequentialGroup()
                     .addComponent(chat_list_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 12, Short.MAX_VALUE)))
+                    .addGap(0, 5, Short.MAX_VALUE)))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layered_paneLayout.createSequentialGroup()
-                    .addComponent(setting_panel, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE)
+                    .addComponent(setting_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layered_paneLayout.createSequentialGroup()
@@ -1082,8 +1074,8 @@ public class ChatUI extends javax.swing.JFrame {
                     .addContainerGap()))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layered_paneLayout.createSequentialGroup()
-                    .addComponent(admin_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
+                    .addComponent(admin_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 2, Short.MAX_VALUE)))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layered_paneLayout.createSequentialGroup()
                     .addComponent(group_create_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1091,7 +1083,7 @@ public class ChatUI extends javax.swing.JFrame {
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layered_paneLayout.createSequentialGroup()
                     .addComponent(chat_body_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 12, Short.MAX_VALUE)))
+                    .addGap(0, 355, Short.MAX_VALUE)))
         );
         layered_paneLayout.setVerticalGroup(
             layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1101,8 +1093,9 @@ public class ChatUI extends javax.swing.JFrame {
                 .addComponent(signin_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layered_paneLayout.createSequentialGroup()
-                    .addGap(0, 30, Short.MAX_VALUE)
-                    .addComponent(signup_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(30, Short.MAX_VALUE)
+                    .addComponent(signup_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layered_paneLayout.createSequentialGroup()
                     .addGap(0, 30, Short.MAX_VALUE)
@@ -1126,8 +1119,8 @@ public class ChatUI extends javax.swing.JFrame {
                     .addGap(1, 1, 1)))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layered_paneLayout.createSequentialGroup()
-                    .addGap(0, 30, Short.MAX_VALUE)
-                    .addComponent(admin_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 36, Short.MAX_VALUE)
+                    .addComponent(admin_panel, javax.swing.GroupLayout.PREFERRED_SIZE, 494, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layered_paneLayout.createSequentialGroup()
                     .addGap(0, 30, Short.MAX_VALUE)
@@ -1340,32 +1333,6 @@ public class ChatUI extends javax.swing.JFrame {
 
         this.setLocation(x - xx, y - yy);
     }//GEN-LAST:event_titlebarMouseDragged
-
-    private void fp_signin_linkMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fp_signin_linkMouseEntered
-        fp_signin_link.setVisible(false);
-        fp_signin_link_hover.setVisible(true);
-    }//GEN-LAST:event_fp_signin_linkMouseEntered
-
-    private void fp_signin_link_hoverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fp_signin_link_hoverMouseClicked
-        signin_default();
-    }//GEN-LAST:event_fp_signin_link_hoverMouseClicked
-
-    private void fp_signin_link_hoverMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fp_signin_link_hoverMouseExited
-        fp_signin_link_hover.setVisible(false);
-        fp_signin_link.setVisible(true);
-    }//GEN-LAST:event_fp_signin_link_hoverMouseExited
-
-    private void fp_recovery_codeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fp_recovery_codeFocusLost
-        if (fp_recovery_code.getText().trim().equalsIgnoreCase("")) {
-            fp_recovery_code.setText("Recovery code");
-        }
-    }//GEN-LAST:event_fp_recovery_codeFocusLost
-
-    private void fp_recovery_codeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fp_recovery_codeMouseClicked
-        if (fp_recovery_code.getText().trim().equalsIgnoreCase("recovery code")) {
-            fp_recovery_code.setText(null);
-        }
-    }//GEN-LAST:event_fp_recovery_codeMouseClicked
 
     private void new_pwdFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_new_pwdFocusLost
         // TODO add your handling code here:
@@ -1832,6 +1799,32 @@ public class ChatUI extends javax.swing.JFrame {
     private void sign_up_linkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sign_up_linkActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_sign_up_linkActionPerformed
+
+    private void fp_signin_link_hoverMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fp_signin_link_hoverMouseExited
+        fp_signin_link_hover.setVisible(false);
+        fp_signin_link.setVisible(true);
+    }//GEN-LAST:event_fp_signin_link_hoverMouseExited
+
+    private void fp_signin_link_hoverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fp_signin_link_hoverMouseClicked
+        signin_default();
+    }//GEN-LAST:event_fp_signin_link_hoverMouseClicked
+
+    private void fp_signin_linkMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fp_signin_linkMouseEntered
+        fp_signin_link.setVisible(false);
+        fp_signin_link_hover.setVisible(true);
+    }//GEN-LAST:event_fp_signin_linkMouseEntered
+
+    private void fp_recovery_codeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fp_recovery_codeMouseClicked
+        if (fp_recovery_code.getText().trim().equalsIgnoreCase("recovery code")) {
+            fp_recovery_code.setText(null);
+        }
+    }//GEN-LAST:event_fp_recovery_codeMouseClicked
+
+    private void fp_recovery_codeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fp_recovery_codeFocusLost
+        if (fp_recovery_code.getText().trim().equalsIgnoreCase("")) {
+            fp_recovery_code.setText("Recovery code");
+        }
+    }//GEN-LAST:event_fp_recovery_codeFocusLost
 
     public void sender() {
         String m = msg_typer.getText();
@@ -2383,7 +2376,6 @@ public class ChatUI extends javax.swing.JFrame {
     private javax.swing.JTextField signin_link_hover1;
     private javax.swing.JPanel signin_panel;
     private javax.swing.JLabel signup_btn;
-    private javax.swing.JLabel signup_copyrights1;
     private javax.swing.JTextField signup_email;
     private javax.swing.JLabel signup_email_line;
     private javax.swing.JLabel signup_email_line1;
@@ -2392,7 +2384,6 @@ public class ChatUI extends javax.swing.JFrame {
     private javax.swing.JLabel signup_error1;
     private javax.swing.JLabel signup_eye_close_icon;
     private javax.swing.JLabel signup_eye_open_icon;
-    private javax.swing.JLabel signup_footer1;
     private javax.swing.JTextField signup_nickname;
     private javax.swing.JLabel signup_nickname_line;
     private javax.swing.JLabel signup_nickname_line1;
