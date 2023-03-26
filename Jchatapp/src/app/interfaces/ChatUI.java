@@ -148,8 +148,6 @@ public class ChatUI extends javax.swing.JFrame {
         current_pwd = new javax.swing.JTextField();
         success_msg = new javax.swing.JLabel();
         signin_link_hover1 = new javax.swing.JTextField();
-        signup_copyrights1 = new javax.swing.JLabel();
-        signup_footer1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         update_panel = new javax.swing.JPanel();
         update_profile_pic1 = new javax.swing.JLabel();
@@ -164,8 +162,6 @@ public class ChatUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         admin_panel = new javax.swing.JPanel();
         signup_error1 = new javax.swing.JLabel();
-        signup_copyrights3 = new javax.swing.JLabel();
-        signup_footer3 = new javax.swing.JLabel();
         create_new_chat_btn = new javax.swing.JLabel();
         group_scrollPane = new javax.swing.JScrollPane();
         group_panel = new javax.swing.JPanel();
@@ -745,7 +741,7 @@ public class ChatUI extends javax.swing.JFrame {
         jLabel11.setText("Admin");
         setting_panel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
-        update_pwd_panel.setBackground(new java.awt.Color(28, 36, 47));
+        update_pwd_panel.setBackground(new java.awt.Color(204, 204, 255));
         update_pwd_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         new_pwd.setBackground(new java.awt.Color(28, 36, 47));
@@ -841,15 +837,6 @@ public class ChatUI extends javax.swing.JFrame {
             }
         });
         update_pwd_panel.add(signin_link_hover1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 50, 20));
-
-        signup_copyrights1.setFont(new java.awt.Font("Bookman Old Style", 0, 10)); // NOI18N
-        signup_copyrights1.setForeground(new java.awt.Color(255, 255, 255));
-        signup_copyrights1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        signup_copyrights1.setText("<html><center>Copyrights &copy; 2020 Team Semicolon<br>All rights reserved</center></html>");
-        update_pwd_panel.add(signup_copyrights1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 360, 30));
-
-        signup_footer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/footer.gif"))); // NOI18N
-        update_pwd_panel.add(signup_footer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 375, 130));
 
         jButton3.setText("change password");
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -958,22 +945,13 @@ public class ChatUI extends javax.swing.JFrame {
         });
         update_panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 200, 30));
 
-        admin_panel.setBackground(new java.awt.Color(28, 36, 47));
+        admin_panel.setBackground(new java.awt.Color(204, 204, 255));
         admin_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         signup_error1.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         signup_error1.setForeground(new java.awt.Color(206, 47, 131));
         signup_error1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         admin_panel.add(signup_error1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 310, 20));
-
-        signup_copyrights3.setFont(new java.awt.Font("Bookman Old Style", 0, 10)); // NOI18N
-        signup_copyrights3.setForeground(new java.awt.Color(255, 255, 255));
-        signup_copyrights3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        signup_copyrights3.setText("<html><center>Copyrights &copy; 2020 Team Semicolon<br>All rights reserved</center></html>");
-        admin_panel.add(signup_copyrights3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 360, 30));
-
-        signup_footer3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/footer.gif"))); // NOI18N
-        admin_panel.add(signup_footer3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 375, 130));
 
         create_new_chat_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/create new.png"))); // NOI18N
         create_new_chat_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -2417,8 +2395,6 @@ public class ChatUI extends javax.swing.JFrame {
     private javax.swing.JTextField signin_link_hover1;
     private javax.swing.JPanel signin_panel;
     private javax.swing.JLabel signup_btn;
-    private javax.swing.JLabel signup_copyrights1;
-    private javax.swing.JLabel signup_copyrights3;
     private javax.swing.JTextField signup_email;
     private javax.swing.JLabel signup_email_line;
     private javax.swing.JLabel signup_email_line1;
@@ -2427,8 +2403,6 @@ public class ChatUI extends javax.swing.JFrame {
     private javax.swing.JLabel signup_error1;
     private javax.swing.JLabel signup_eye_close_icon;
     private javax.swing.JLabel signup_eye_open_icon;
-    private javax.swing.JLabel signup_footer1;
-    private javax.swing.JLabel signup_footer3;
     private javax.swing.JTextField signup_nickname;
     private javax.swing.JLabel signup_nickname_line;
     private javax.swing.JLabel signup_nickname_line1;
