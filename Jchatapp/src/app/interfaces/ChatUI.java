@@ -734,7 +734,6 @@ public class ChatUI extends javax.swing.JFrame {
         update_pwd_panel.setBackground(new java.awt.Color(204, 204, 255));
         update_pwd_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        new_pwd.setBackground(new java.awt.Color(28, 36, 47));
         new_pwd.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         new_pwd.setForeground(new java.awt.Color(111, 117, 124));
         new_pwd.setText("New Passowrd");
@@ -755,7 +754,6 @@ public class ChatUI extends javax.swing.JFrame {
         signup_email_line1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         update_pwd_panel.add(signup_email_line1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, 10));
 
-        new_pwd2.setBackground(new java.awt.Color(28, 36, 47));
         new_pwd2.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         new_pwd2.setForeground(new java.awt.Color(111, 117, 124));
         new_pwd2.setText("New Corfirm Password");
@@ -780,7 +778,6 @@ public class ChatUI extends javax.swing.JFrame {
         signup_nickname_line1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         update_pwd_panel.add(signup_nickname_line1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, -1, 10));
 
-        current_pwd.setBackground(new java.awt.Color(28, 36, 47));
         current_pwd.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         current_pwd.setForeground(new java.awt.Color(111, 117, 124));
         current_pwd.setText("Current Password");
@@ -803,7 +800,7 @@ public class ChatUI extends javax.swing.JFrame {
         update_pwd_panel.add(success_msg, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 280, -1));
 
         signin_link_hover1.setEditable(false);
-        signin_link_hover1.setBackground(new java.awt.Color(28, 36, 47));
+        signin_link_hover1.setBackground(new java.awt.Color(255, 255, 255));
         signin_link_hover1.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         signin_link_hover1.setForeground(new java.awt.Color(206, 47, 131));
         signin_link_hover1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
