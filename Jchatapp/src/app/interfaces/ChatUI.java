@@ -194,7 +194,7 @@ public class ChatUI extends javax.swing.JFrame {
 
         titlebar.setFont(new java.awt.Font("Bookman Old Style", 1, 14)); // NOI18N
         titlebar.setForeground(new java.awt.Color(111, 117, 124));
-        titlebar.setText("  Chat App");
+        titlebar.setText("  FOT Chat App");
         titlebar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         titlebar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -2356,38 +2356,6 @@ public class ChatUI extends javax.swing.JFrame {
         }
     }
 
-//    public static String encodeToString(BufferedImage image, String type) {
-//        String imageString = null;
-//        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-//
-//        try {
-//            ImageIO.write(image, type, bos);
-//            byte[] imageBytes = bos.toByteArray();
-//
-//            BASE64Encoder encoder = new BASE64Encoder();
-//            imageString = encoder.encode(imageBytes);
-//
-//            bos.close();
-//        } catch (IOException e) {
-//
-//        }
-//        return imageString;
-//    }
-//    public static BufferedImage decodeToImage(String imageString) {
-//
-//        BufferedImage image = null;
-//        byte[] imageByte;
-//        try {
-//            BASE64Decoder decoder = new BASE64Decoder();
-//            imageByte = decoder.decodeBuffer(imageString);
-//            ByteArrayInputStream bis = new ByteArrayInputStream(imageByte);
-//            image = ImageIO.read(bis);
-//            bis.close();
-//        } catch (Exception e) {
-//
-//        }
-//        return image;
-//    }
     /**
      * @param args the command line arguments
      */
