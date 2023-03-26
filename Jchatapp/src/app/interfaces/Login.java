@@ -77,11 +77,8 @@ public class Login extends javax.swing.JFrame {
         minimize = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
         signin_panel = new javax.swing.JPanel();
-        logo = new javax.swing.JLabel();
-        username_icon = new javax.swing.JLabel();
         username = new javax.swing.JTextField();
         username_line = new javax.swing.JLabel();
-        password_icon = new javax.swing.JLabel();
         password = new javax.swing.JPasswordField();
         password_line = new javax.swing.JLabel();
         eye_open_icon = new javax.swing.JLabel();
@@ -92,8 +89,9 @@ public class Login extends javax.swing.JFrame {
         forgot_password_hover = new javax.swing.JTextField();
         sign_up_link = new javax.swing.JTextField();
         sign_up_link_hover = new javax.swing.JTextField();
-        signin_copyrights = new javax.swing.JLabel();
-        signin_footer = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         signup_panel = new javax.swing.JPanel();
         signup_profile_pic = new javax.swing.JLabel();
         signup_email = new javax.swing.JTextField();
@@ -252,16 +250,9 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(close, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        signin_panel.setBackground(new java.awt.Color(28, 36, 47));
+        signin_panel.setBackground(new java.awt.Color(255, 255, 0));
         signin_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/logo_pink.png"))); // NOI18N
-        signin_panel.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 120, 120));
-
-        username_icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/username.png"))); // NOI18N
-        signin_panel.add(username_icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 20, 20));
-
-        username.setBackground(new java.awt.Color(28, 36, 47));
         username.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         username.setForeground(new java.awt.Color(111, 117, 124));
         username.setAutoscrolls(false);
@@ -276,16 +267,12 @@ public class Login extends javax.swing.JFrame {
                 usernameMouseClicked(evt);
             }
         });
-        signin_panel.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 240, 20));
+        signin_panel.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 240, 20));
 
         username_line.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/hrline.png"))); // NOI18N
         username_line.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        signin_panel.add(username_line, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, -1, 10));
+        signin_panel.add(username_line, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, 10));
 
-        password_icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/password.png"))); // NOI18N
-        signin_panel.add(password_icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 20, 20));
-
-        password.setBackground(new java.awt.Color(28, 36, 47));
         password.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         password.setForeground(new java.awt.Color(111, 117, 124));
         password.setBorder(null);
@@ -304,11 +291,11 @@ public class Login extends javax.swing.JFrame {
                 passwordActionPerformed(evt);
             }
         });
-        signin_panel.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 220, 20));
+        signin_panel.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 220, 20));
 
         password_line.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/hrline.png"))); // NOI18N
         password_line.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        signin_panel.add(password_line, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, -1, 10));
+        signin_panel.add(password_line, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, 10));
 
         eye_open_icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/eye_open.png"))); // NOI18N
         eye_open_icon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -317,7 +304,7 @@ public class Login extends javax.swing.JFrame {
                 eye_open_iconMouseClicked(evt);
             }
         });
-        signin_panel.add(eye_open_icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 20, 20));
+        signin_panel.add(eye_open_icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 20, 20));
 
         eye_close_icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/eye_close.png"))); // NOI18N
         eye_close_icon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -326,7 +313,7 @@ public class Login extends javax.swing.JFrame {
                 eye_close_iconMouseClicked(evt);
             }
         });
-        signin_panel.add(eye_close_icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 20, 20));
+        signin_panel.add(eye_close_icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 20, 20));
 
         signin_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/signin_pink.png"))); // NOI18N
         signin_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -417,14 +404,15 @@ public class Login extends javax.swing.JFrame {
         });
         signin_panel.add(sign_up_link_hover, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, 50, 20));
 
-        signin_copyrights.setFont(new java.awt.Font("Bookman Old Style", 0, 10)); // NOI18N
-        signin_copyrights.setForeground(new java.awt.Color(255, 255, 255));
-        signin_copyrights.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        signin_copyrights.setText("<html><center>Copyrights &copy; 2020 Team Semicolon<br>All rights reserved</center></html>");
-        signin_panel.add(signin_copyrights, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 360, 30));
+        jLabel4.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        jLabel4.setText("SIGN IN");
+        signin_panel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, -1, -1));
 
-        signin_footer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/footer.gif"))); // NOI18N
-        signin_panel.add(signin_footer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 375, 130));
+        jLabel6.setText("User Name");
+        signin_panel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+
+        jLabel8.setText("Password");
+        signin_panel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
 
         signup_panel.setBackground(new java.awt.Color(28, 36, 47));
         signup_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -2533,11 +2521,13 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLayeredPane layered_pane;
-    private javax.swing.JLabel logo;
     private javax.swing.JLabel logout1;
     private javax.swing.JLabel logout2;
     private javax.swing.JLabel minimize;
@@ -2546,7 +2536,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField new_pwd;
     private javax.swing.JTextField new_pwd2;
     private javax.swing.JPasswordField password;
-    private javax.swing.JLabel password_icon;
     private javax.swing.JLabel password_line;
     private javax.swing.JLabel send_btn;
     private javax.swing.JLabel setting_lable;
@@ -2555,10 +2544,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField sign_up_link;
     private javax.swing.JTextField sign_up_link_hover;
     private javax.swing.JLabel signin_btn;
-    private javax.swing.JLabel signin_copyrights;
     private javax.swing.JLabel signin_copyrights1;
     private javax.swing.JLabel signin_error;
-    private javax.swing.JLabel signin_footer;
     private javax.swing.JLabel signin_footer1;
     private javax.swing.JTextField signin_link;
     private javax.swing.JTextField signin_link_hover;
@@ -2603,7 +2590,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel update_profile_pic1;
     private javax.swing.JPanel update_pwd_panel;
     private javax.swing.JTextField username;
-    private javax.swing.JLabel username_icon;
     private javax.swing.JLabel username_line;
     private javax.swing.JLabel username_line1;
     // End of variables declaration//GEN-END:variables
