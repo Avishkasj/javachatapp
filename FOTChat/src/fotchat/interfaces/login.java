@@ -6,11 +6,11 @@ package fotchat.interfaces;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
-import app.dbmanager.DBManager;
-import app.interfaces.ChatBall;
-import app.interfaces.chatUser;
-import app.pojos.User;
-import app.services.Chat;
+import fotchat.dbmanager.DBManager;
+import fotchat.interfaces.ChatBall;
+import fotchat.interfaces.chatUser;
+import fotchat.pogos.User;
+import fotchat.services.Chat;
 import java.rmi.registry.Registry;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -186,21 +186,21 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
-        if (username.getText().trim().equalsIgnoreCase("username")) {
-            username.setText(null);
+        if (jTextField1.getText().trim().equalsIgnoreCase("username")) {
+            jTextField1.setText(null);
         }// TODO add your handling code here:
     }//GEN-LAST:event_jTextField1MouseClicked
 
     private void jPasswordField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField1MouseClicked
-        if (password.getText().trim().equalsIgnoreCase("password")) {
-            password.setText(null);
-            password.setEchoChar('*');
+        if (jPasswordField1.getText().trim().equalsIgnoreCase("password")) {
+            jPasswordField1.setText(null);
+            jPasswordField1.setEchoChar('*');
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1MouseClicked
 
     private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
-        signinLink.setVisible(false);
-        signinLinkHover.setVisible(true);        // TODO add your handling code here:
+        jButton1.setVisible(false);
+        jButton1.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseEntered
 
     
@@ -211,8 +211,8 @@ public class login extends javax.swing.JFrame {
     
      private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {                                        
 
-        String user_name = username.getText();
-        String user_pwd = password.getText();
+        String user_name = jTextField1.getText();
+        String user_pwd = jPasswordField1.getText();
 
         ArrayList<String> error = validatelogin(user_name, user_pwd);
 
@@ -261,7 +261,7 @@ public class login extends javax.swing.JFrame {
         
 
     }
-      //VALIDATE LOGIN
+      //VALIDATE LOGIN----------------
       
        public ArrayList<String> validatelogin(String username, String password) {
         ArrayList<String> errors = new ArrayList<String>();
