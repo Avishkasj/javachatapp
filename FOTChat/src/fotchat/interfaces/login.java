@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package fotchat.interfaces;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 import app.dbmanager.DBManager;
 import app.interfaces.ChatBall;
@@ -32,7 +34,8 @@ public class login extends javax.swing.JFrame {
     
     public login() {
         initComponents();
-        
+        new ChatBall(this).setVisible(true);
+
         Dimension screen_size = Toolkit.getDefaultToolkit().getScreenSize();
         setLocation(screen_size.width - 425, getY());
 
@@ -58,6 +61,7 @@ public class login extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("f2");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 102));
 
