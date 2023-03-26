@@ -729,7 +729,7 @@ public class Login extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/hrlinelong.png"))); // NOI18N
         chat_body_panel.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 290, 10));
 
-        chat_list_panel.setBackground(new java.awt.Color(28, 36, 47));
+        chat_list_panel.setBackground(new java.awt.Color(204, 204, 255));
         chat_list_panel.setPreferredSize(new java.awt.Dimension(375, 500));
         chat_list_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -758,7 +758,7 @@ public class Login extends javax.swing.JFrame {
 
         chat_list_scrollPane.setBackground(new java.awt.Color(28, 36, 47));
 
-        client_groups_panel.setBackground(new java.awt.Color(28, 36, 47));
+        client_groups_panel.setBackground(new java.awt.Color(255, 255, 255));
         client_groups_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         chat_list_scrollPane.setViewportView(client_groups_panel);
 
