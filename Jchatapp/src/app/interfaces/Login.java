@@ -108,8 +108,6 @@ public class Login extends javax.swing.JFrame {
         signup_error = new javax.swing.JLabel();
         signin_link = new javax.swing.JTextField();
         signin_link_hover = new javax.swing.JTextField();
-        signup_copyrights = new javax.swing.JLabel();
-        signup_footer = new javax.swing.JLabel();
         forgot_password_panel = new javax.swing.JPanel();
         fp_logo = new javax.swing.JLabel();
         fp_resend_code = new javax.swing.JLabel();
@@ -414,7 +412,7 @@ public class Login extends javax.swing.JFrame {
         jLabel8.setText("Password");
         signin_panel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
 
-        signup_panel.setBackground(new java.awt.Color(28, 36, 47));
+        signup_panel.setBackground(new java.awt.Color(204, 204, 255));
         signup_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         signup_profile_pic.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
@@ -588,15 +586,6 @@ public class Login extends javax.swing.JFrame {
             }
         });
         signup_panel.add(signin_link_hover, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 50, 20));
-
-        signup_copyrights.setFont(new java.awt.Font("Bookman Old Style", 0, 10)); // NOI18N
-        signup_copyrights.setForeground(new java.awt.Color(255, 255, 255));
-        signup_copyrights.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        signup_copyrights.setText("<html><center>Copyrights &copy; 2020 Team Semicolon<br>All rights reserved</center></html>");
-        signup_panel.add(signup_copyrights, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 360, 30));
-
-        signup_footer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/footer.gif"))); // NOI18N
-        signup_panel.add(signup_footer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 375, 130));
 
         forgot_password_panel.setBackground(new java.awt.Color(28, 36, 47));
         forgot_password_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1171,13 +1160,9 @@ public class Login extends javax.swing.JFrame {
         layered_paneLayout.setHorizontalGroup(
             layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(title_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layered_paneLayout.createSequentialGroup()
-                .addComponent(signin_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
+            .addComponent(signin_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layered_paneLayout.createSequentialGroup()
-                    .addComponent(signup_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 12, Short.MAX_VALUE)))
+                .addComponent(signup_panel, javax.swing.GroupLayout.DEFAULT_SIZE, 387, Short.MAX_VALUE))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layered_paneLayout.createSequentialGroup()
                     .addComponent(forgot_password_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1188,7 +1173,7 @@ public class Login extends javax.swing.JFrame {
                     .addGap(0, 12, Short.MAX_VALUE)))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layered_paneLayout.createSequentialGroup()
-                    .addComponent(setting_panel, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE)
+                    .addComponent(setting_panel, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE)
                     .addContainerGap()))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layered_paneLayout.createSequentialGroup()
@@ -2552,7 +2537,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField signin_link_hover1;
     private javax.swing.JPanel signin_panel;
     private javax.swing.JLabel signup_btn;
-    private javax.swing.JLabel signup_copyrights;
     private javax.swing.JLabel signup_copyrights1;
     private javax.swing.JLabel signup_copyrights2;
     private javax.swing.JLabel signup_copyrights3;
@@ -2564,7 +2548,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel signup_error1;
     private javax.swing.JLabel signup_eye_close_icon;
     private javax.swing.JLabel signup_eye_open_icon;
-    private javax.swing.JLabel signup_footer;
     private javax.swing.JLabel signup_footer1;
     private javax.swing.JLabel signup_footer2;
     private javax.swing.JLabel signup_footer3;
