@@ -148,8 +148,6 @@ public class ChatUI extends javax.swing.JFrame {
         current_pwd = new javax.swing.JTextField();
         success_msg = new javax.swing.JLabel();
         signin_link_hover1 = new javax.swing.JTextField();
-        signup_copyrights1 = new javax.swing.JLabel();
-        signup_footer1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         update_panel = new javax.swing.JPanel();
         update_profile_pic1 = new javax.swing.JLabel();
@@ -729,10 +727,9 @@ public class ChatUI extends javax.swing.JFrame {
         jLabel11.setText("Admin");
         setting_panel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
-        update_pwd_panel.setBackground(new java.awt.Color(28, 36, 47));
+        update_pwd_panel.setBackground(new java.awt.Color(204, 204, 255));
         update_pwd_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        new_pwd.setBackground(new java.awt.Color(28, 36, 47));
         new_pwd.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         new_pwd.setForeground(new java.awt.Color(111, 117, 124));
         new_pwd.setText("New Passowrd");
@@ -753,7 +750,6 @@ public class ChatUI extends javax.swing.JFrame {
         signup_email_line1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         update_pwd_panel.add(signup_email_line1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, 10));
 
-        new_pwd2.setBackground(new java.awt.Color(28, 36, 47));
         new_pwd2.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         new_pwd2.setForeground(new java.awt.Color(111, 117, 124));
         new_pwd2.setText("New Corfirm Password");
@@ -778,7 +774,6 @@ public class ChatUI extends javax.swing.JFrame {
         signup_nickname_line1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         update_pwd_panel.add(signup_nickname_line1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, -1, 10));
 
-        current_pwd.setBackground(new java.awt.Color(28, 36, 47));
         current_pwd.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         current_pwd.setForeground(new java.awt.Color(111, 117, 124));
         current_pwd.setText("Current Password");
@@ -801,7 +796,7 @@ public class ChatUI extends javax.swing.JFrame {
         update_pwd_panel.add(success_msg, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 280, -1));
 
         signin_link_hover1.setEditable(false);
-        signin_link_hover1.setBackground(new java.awt.Color(28, 36, 47));
+        signin_link_hover1.setBackground(new java.awt.Color(255, 255, 255));
         signin_link_hover1.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         signin_link_hover1.setForeground(new java.awt.Color(206, 47, 131));
         signin_link_hover1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -821,15 +816,6 @@ public class ChatUI extends javax.swing.JFrame {
             }
         });
         update_pwd_panel.add(signin_link_hover1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 50, 20));
-
-        signup_copyrights1.setFont(new java.awt.Font("Bookman Old Style", 0, 10)); // NOI18N
-        signup_copyrights1.setForeground(new java.awt.Color(255, 255, 255));
-        signup_copyrights1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        signup_copyrights1.setText("<html><center>Copyrights &copy; 2020 Team Semicolon<br>All rights reserved</center></html>");
-        update_pwd_panel.add(signup_copyrights1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 360, 30));
-
-        signup_footer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/footer.gif"))); // NOI18N
-        update_pwd_panel.add(signup_footer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 375, 130));
 
         jButton3.setText("change password");
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1126,7 +1112,7 @@ public class ChatUI extends javax.swing.JFrame {
                     .addGap(1, 1, 1)))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layered_paneLayout.createSequentialGroup()
-                    .addGap(0, 30, Short.MAX_VALUE)
+                    .addGap(0, 140, Short.MAX_VALUE)
                     .addComponent(admin_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addGroup(layered_paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layered_paneLayout.createSequentialGroup()
@@ -2383,7 +2369,6 @@ public class ChatUI extends javax.swing.JFrame {
     private javax.swing.JTextField signin_link_hover1;
     private javax.swing.JPanel signin_panel;
     private javax.swing.JLabel signup_btn;
-    private javax.swing.JLabel signup_copyrights1;
     private javax.swing.JTextField signup_email;
     private javax.swing.JLabel signup_email_line;
     private javax.swing.JLabel signup_email_line1;
@@ -2392,7 +2377,6 @@ public class ChatUI extends javax.swing.JFrame {
     private javax.swing.JLabel signup_error1;
     private javax.swing.JLabel signup_eye_close_icon;
     private javax.swing.JLabel signup_eye_open_icon;
-    private javax.swing.JLabel signup_footer1;
     private javax.swing.JTextField signup_nickname;
     private javax.swing.JLabel signup_nickname_line;
     private javax.swing.JLabel signup_nickname_line1;
