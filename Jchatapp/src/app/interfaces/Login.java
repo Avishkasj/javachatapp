@@ -250,7 +250,7 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(close, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        signin_panel.setBackground(new java.awt.Color(255, 255, 0));
+        signin_panel.setBackground(new java.awt.Color(204, 204, 255));
         signin_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         username.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
@@ -322,7 +322,7 @@ public class Login extends javax.swing.JFrame {
                 signin_btnMouseClicked(evt);
             }
         });
-        signin_panel.add(signin_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 200, 30));
+        signin_panel.add(signin_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 200, 30));
 
         signin_error.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         signin_error.setForeground(new java.awt.Color(206, 47, 131));
