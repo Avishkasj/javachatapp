@@ -108,6 +108,10 @@ public class Login extends javax.swing.JFrame {
         signup_error = new javax.swing.JLabel();
         signin_link = new javax.swing.JTextField();
         signin_link_hover = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         forgot_password_panel = new javax.swing.JPanel();
         fp_logo = new javax.swing.JLabel();
         fp_resend_code = new javax.swing.JLabel();
@@ -118,8 +122,6 @@ public class Login extends javax.swing.JFrame {
         fp_error = new javax.swing.JLabel();
         fp_signin_link = new javax.swing.JTextField();
         fp_signin_link_hover = new javax.swing.JTextField();
-        fp_copyrights = new javax.swing.JLabel();
-        fp_footer = new javax.swing.JLabel();
         chat_body_panel = new javax.swing.JPanel();
         chatlist_title2 = new javax.swing.JLabel();
         chatlist_setting2 = new javax.swing.JLabel();
@@ -424,7 +426,6 @@ public class Login extends javax.swing.JFrame {
         });
         signup_panel.add(signup_profile_pic, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 120, 120));
 
-        signup_email.setBackground(new java.awt.Color(28, 36, 47));
         signup_email.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         signup_email.setForeground(new java.awt.Color(111, 117, 124));
         signup_email.setText("Email");
@@ -440,13 +441,12 @@ public class Login extends javax.swing.JFrame {
                 signup_emailMouseClicked(evt);
             }
         });
-        signup_panel.add(signup_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 240, 20));
+        signup_panel.add(signup_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 200, 20));
 
         signup_email_line.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/hrline.png"))); // NOI18N
         signup_email_line.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        signup_panel.add(signup_email_line, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, 10));
+        signup_panel.add(signup_email_line, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 200, 10));
 
-        signup_username.setBackground(new java.awt.Color(28, 36, 47));
         signup_username.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         signup_username.setForeground(new java.awt.Color(111, 117, 124));
         signup_username.setText("Username");
@@ -462,13 +462,12 @@ public class Login extends javax.swing.JFrame {
                 signup_usernameMouseClicked(evt);
             }
         });
-        signup_panel.add(signup_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 240, 20));
+        signup_panel.add(signup_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 200, 20));
 
         signup_username_line.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/hrline.png"))); // NOI18N
         signup_username_line.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        signup_panel.add(signup_username_line, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, 10));
+        signup_panel.add(signup_username_line, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 200, 10));
 
-        signup_password.setBackground(new java.awt.Color(28, 36, 47));
         signup_password.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         signup_password.setForeground(new java.awt.Color(111, 117, 124));
         signup_password.setText("Password");
@@ -483,7 +482,7 @@ public class Login extends javax.swing.JFrame {
                 signup_passwordMouseClicked(evt);
             }
         });
-        signup_panel.add(signup_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 220, 20));
+        signup_panel.add(signup_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 180, 20));
 
         signup_eye_open_icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/eye_open.png"))); // NOI18N
         signup_eye_open_icon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -505,13 +504,12 @@ public class Login extends javax.swing.JFrame {
 
         signup_password_line.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/hrline.png"))); // NOI18N
         signup_password_line.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        signup_panel.add(signup_password_line, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, 10));
+        signup_panel.add(signup_password_line, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 200, 10));
 
         signup_nickname_line.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/hrline.png"))); // NOI18N
         signup_nickname_line.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        signup_panel.add(signup_nickname_line, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, 10));
+        signup_panel.add(signup_nickname_line, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 200, 10));
 
-        signup_nickname.setBackground(new java.awt.Color(28, 36, 47));
         signup_nickname.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         signup_nickname.setForeground(new java.awt.Color(111, 117, 124));
         signup_nickname.setText("Nick name");
@@ -527,7 +525,7 @@ public class Login extends javax.swing.JFrame {
                 signup_nicknameMouseClicked(evt);
             }
         });
-        signup_panel.add(signup_nickname, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 240, 20));
+        signup_panel.add(signup_nickname, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, 200, 20));
 
         signup_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/signup_pink.png"))); // NOI18N
         signup_btn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -541,9 +539,8 @@ public class Login extends javax.swing.JFrame {
         signup_error.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         signup_error.setForeground(new java.awt.Color(206, 47, 131));
         signup_error.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        signup_panel.add(signup_error, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 310, 20));
+        signup_panel.add(signup_error, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 310, 20));
 
-        signin_link.setBackground(new java.awt.Color(28, 36, 47));
         signin_link.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         signin_link.setForeground(new java.awt.Color(111, 117, 124));
         signin_link.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -566,7 +563,7 @@ public class Login extends javax.swing.JFrame {
         signup_panel.add(signin_link, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 50, 20));
 
         signin_link_hover.setEditable(false);
-        signin_link_hover.setBackground(new java.awt.Color(28, 36, 47));
+        signin_link_hover.setBackground(new java.awt.Color(255, 255, 255));
         signin_link_hover.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         signin_link_hover.setForeground(new java.awt.Color(206, 47, 131));
         signin_link_hover.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -583,7 +580,19 @@ public class Login extends javax.swing.JFrame {
         });
         signup_panel.add(signin_link_hover, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, 50, 20));
 
-        forgot_password_panel.setBackground(new java.awt.Color(28, 36, 47));
+        jLabel9.setText("Nick Name");
+        signup_panel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
+
+        jLabel10.setText("E-mail");
+        signup_panel.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+
+        jLabel14.setText("User Name");
+        signup_panel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+
+        jLabel12.setText("Password");
+        signup_panel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+
+        forgot_password_panel.setBackground(new java.awt.Color(204, 204, 255));
         forgot_password_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         fp_logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/logo_pink.png"))); // NOI18N
@@ -601,7 +610,6 @@ public class Login extends javax.swing.JFrame {
         fp_description.setText("<html>We've sent a recovery code to your email.<br>Please enter the code to change your password. If you haven't received any mail, please</html>");
         forgot_password_panel.add(fp_description, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 240, 70));
 
-        fp_recovery_code.setBackground(new java.awt.Color(28, 36, 47));
         fp_recovery_code.setFont(new java.awt.Font("Bookman Old Style", 0, 11)); // NOI18N
         fp_recovery_code.setForeground(new java.awt.Color(111, 117, 124));
         fp_recovery_code.setText("Recovery code");
@@ -633,7 +641,6 @@ public class Login extends javax.swing.JFrame {
         fp_error.setText("username and password are required");
         forgot_password_panel.add(fp_error, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 310, -1));
 
-        fp_signin_link.setBackground(new java.awt.Color(28, 36, 47));
         fp_signin_link.setFont(new java.awt.Font("Bookman Old Style", 0, 12)); // NOI18N
         fp_signin_link.setForeground(new java.awt.Color(111, 117, 124));
         fp_signin_link.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -664,15 +671,6 @@ public class Login extends javax.swing.JFrame {
             }
         });
         forgot_password_panel.add(fp_signin_link_hover, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, 50, 20));
-
-        fp_copyrights.setFont(new java.awt.Font("Bookman Old Style", 0, 10)); // NOI18N
-        fp_copyrights.setForeground(new java.awt.Color(255, 255, 255));
-        fp_copyrights.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        fp_copyrights.setText("<html><center>Copyrights &copy; 2020 Team Semicolon<br>All rights reserved</center></html>");
-        forgot_password_panel.add(fp_copyrights, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 360, 30));
-
-        fp_footer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/app/images/footer.gif"))); // NOI18N
-        forgot_password_panel.add(fp_footer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 375, 130));
 
         chat_body_panel.setBackground(new java.awt.Color(204, 204, 255));
         chat_body_panel.setPreferredSize(new java.awt.Dimension(375, 500));
@@ -2457,10 +2455,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField forgot_password_hover;
     private javax.swing.JPanel forgot_password_panel;
     private javax.swing.JLabel fp_confirm_btn;
-    private javax.swing.JLabel fp_copyrights;
     private javax.swing.JLabel fp_description;
     private javax.swing.JLabel fp_error;
-    private javax.swing.JLabel fp_footer;
     private javax.swing.JLabel fp_logo;
     private javax.swing.JTextField fp_recovery_code;
     private javax.swing.JLabel fp_recovery_code_line;
@@ -2475,8 +2471,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JScrollPane group_scrollPane;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -2484,6 +2483,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLayeredPane layered_pane;
     private javax.swing.JLabel logout1;
