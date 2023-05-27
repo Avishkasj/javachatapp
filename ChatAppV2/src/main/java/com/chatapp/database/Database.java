@@ -49,4 +49,20 @@ public class Database {
         return user;
 
     }
+
+    public UserEntity UserPro(int userId) {
+        UserEntity user;
+        try {
+            user = em.find(UserEntity.class, userId);
+        } finally {
+            if (et.isActive()) {
+                et.rollback();
+            }
+        }
+        return user;
+    }
+
+
+
+
 }
