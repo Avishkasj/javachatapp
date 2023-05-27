@@ -1,7 +1,6 @@
 package com.chatapp.chat.Server;
 
-import com.chatapp.chat.Chat;
-import com.chatapp.chat.ChatImp;
+import com.chatapp.chat.*;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
@@ -19,11 +18,21 @@ public class Client {
 
         try {
             chatClient = (Chat) Naming.lookup("rmi://192.168.8.119:3000/chat");
+
+            Observer remoteUser1 = new RemoteUser("User1");
+            Observer remoteUser2 = new RemoteUser("User2");
+
+            chatClient.registerObserver(remoteUser1);
+            chatClient.registerObserver(remoteUser2);
+
+            Message msg = new Message();
+
             while (true){
                 System.out.println("Enter the message : ");
                 String ms = input.nextLine();
-                chat = chatClient.test(ms);
-                System.out.println(chat);
+                msg.setMessage(ms);
+                chatClient.notifyObservers(msg);
+//                System.out.println(chat);
             }
 
 

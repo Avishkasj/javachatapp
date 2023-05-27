@@ -2,7 +2,7 @@ package com.chatapp.chat;
 
 import java.io.Serializable;
 
-public class Messsage implements Serializable {
+public class Message implements Serializable {
 
     private int id;
     private int groupId;
