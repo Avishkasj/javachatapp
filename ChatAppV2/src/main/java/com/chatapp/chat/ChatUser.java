@@ -4,4 +4,5 @@ import java.io.Serializable;
 
 public class ChatUser implements Serializable {
 
+
 }
