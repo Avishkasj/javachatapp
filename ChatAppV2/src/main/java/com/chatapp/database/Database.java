@@ -104,6 +104,12 @@ public class Database {
     }
 
 
+    public void close(){
+        em.close();
+        emf.close();
+    }
+
+
 
 
 }
