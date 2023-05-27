@@ -14,6 +14,7 @@ public class login extends JFrame {
     private JPasswordField passwordField;
     private JButton loginButton;
     private JPanel login;
+    private JTextField textField3;
 
     public Database db = new Database();
 
@@ -26,14 +27,14 @@ public class login extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String username = textField1.getText().trim();
-                String password = new String(passwordField.getPassword()).trim();
+                String password =textField3.getText().trim();
+//                String password = new String(passwordField.getPassword()).trim();
 
 
                 UserEntity user = db.search(username);
                 if (Objects.equals(user.getPassword(), password)){
                     System.out.println("Login successful!");
                 }
-
 
 //                if (user != null) {
 //                    // User exists and login is successful
