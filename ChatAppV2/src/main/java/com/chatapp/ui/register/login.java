@@ -31,7 +31,7 @@ public class login extends JFrame {
 //                String password = new String(passwordField.getPassword()).trim();
 
 
-                UserEntity user = db.search(username);
+                UserEntity user = db.login(username);
                 if (Objects.equals(user.getPassword(), password)){
                     System.out.println("Login successful!");
                 }
