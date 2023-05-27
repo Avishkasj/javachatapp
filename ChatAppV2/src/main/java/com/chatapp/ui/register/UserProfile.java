@@ -5,13 +5,14 @@ import entity.UserEntity;
 
 public class UserProfile {
     Database database = new Database();
-    UserEntity user = database.UserPro(3); // Replace 123 with the specific user ID
+    UserEntity user = database.UserPro(1); // Replace 123 with the specific user ID
 
 if (user != null) {
         System.out.println("User ID: " + user.getId());
         System.out.println("Username: " + user.getUsername());
         System.out.println("Email: " + user.getEmail());
-    } else {
+    }
+else {
         System.out.println("User not found!");
     }
 

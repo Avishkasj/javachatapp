@@ -50,10 +50,10 @@ public class Database {
 
     }
 
-    public UserEntity UserPro(int userId) {
+    public UserEntity UserPro(int id) {
         UserEntity user;
         try {
-            user = em.find(UserEntity.class, userId);
+            user = em.find(UserEntity.class, id);
         } finally {
             if (et.isActive()) {
                 et.rollback();
