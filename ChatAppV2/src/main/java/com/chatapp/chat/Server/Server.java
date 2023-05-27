@@ -16,7 +16,7 @@ public class Server {
 
             LocateRegistry.createRegistry(3000);
 
-            Naming.rebind("rmi://localhost:3000/chat", chat);
+            Naming.rebind("rmi://192.168.8.119:3000/chat", chat);
 
             System.out.println("Server up and running");
 

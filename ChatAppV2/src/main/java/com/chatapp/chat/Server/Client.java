@@ -18,7 +18,7 @@ public class Client {
         Scanner input = new Scanner(System.in);
 
         try {
-            chatClient = (Chat) Naming.lookup("rmi://localhost:3000/chat");
+            chatClient = (Chat) Naming.lookup("rmi://192.168.8.119:3000/chat");
             while (true){
                 System.out.println("Enter the message : ");
                 String ms = input.nextLine();
