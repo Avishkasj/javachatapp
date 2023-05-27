@@ -5,5 +5,27 @@
              version="3.0">
     <persistence-unit name="default">
 
+        <class>entity.FilesEntity</class>
+        <class>entity.GroupsEntity</class>
+        <class>entity.RoleEntity</class>
+        <class>entity.UserEntity</class>
+        <properties>
+            <property name="toplink.jdbc.url" value="jdbc:mariadb://encode99.org.lk:3306/encodeor_javachat"/>
+            <property name="toplink.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+            <property name="toplink.jdbc.user" value="encodeor_javachat"/>
+            <property name="toplink.jdbc.password" value="%Java%1234Chat"/>
+            <property name="hibernate.connection.url" value="jdbc:mariadb://encode99.org.lk:3306/encodeor_javachat"/>
+            <property name="hibernate.connection.driver_class" value="org.mariadb.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="encodeor_javachat"/>
+            <property name="hibernate.connection.password" value="%Java%1234Chat"/>
+            <property name="openjpa.ConnectionURL" value="jdbc:mariadb://encode99.org.lk:3306/encodeor_javachat"/>
+            <property name="openjpa.ConnectionDriverName" value="org.mariadb.jdbc.Driver"/>
+            <property name="openjpa.ConnectionUserName" value="encodeor_javachat"/>
+            <property name="openjpa.ConnectionPassword" value="%Java%1234Chat"/>
+            <property name="eclipselink.jdbc.url" value="jdbc:mariadb://encode99.org.lk:3306/encodeor_javachat"/>
+            <property name="eclipselink.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+            <property name="eclipselink.jdbc.user" value="encodeor_javachat"/>
+            <property name="eclipselink.jdbc.password" value="%Java%1234Chat"/>
+        </properties>
     </persistence-unit>
 </persistence>
