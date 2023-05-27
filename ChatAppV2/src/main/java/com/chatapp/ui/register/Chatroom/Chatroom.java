@@ -2,6 +2,8 @@ package com.chatapp.ui.register.Chatroom;
 
 import com.chatapp.chat.User;
 import com.chatapp.database.Database;
+import com.chatapp.ui.register.UserDashboard;
+import com.chatapp.ui.register.UserProfile;
 import entity.GroupsEntity;
 
 import javax.swing.*;
@@ -65,5 +67,14 @@ public class Chatroom extends JFrame {
         });
 
 
-}
+        availableRoomsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Chatroom.super.dispose();
+                JFrame frame8 = new Chatstart();
+                frame8.setVisible(true);
+                frame8.setSize(400, 500);
+            }
+        });
+    }
 }
