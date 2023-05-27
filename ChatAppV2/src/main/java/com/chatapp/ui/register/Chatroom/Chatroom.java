@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Chatroom {
+public class Chatroom extends JFrame {
     private JTextField textField1;
     private JButton createButton;
     private JTable table1;
@@ -20,6 +20,10 @@ public class Chatroom {
     }
 
     public Chatroom() {
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setContentPane(roompanel);
+        this.pack();
+
     createButton.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
