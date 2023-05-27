@@ -1,6 +1,7 @@
 package com.chatapp.ui.register;
 
 import com.chatapp.database.Database;
+import com.chatapp.ui.register.Chatroom.Chatroom;
 import entity.UserEntity;
 
 import javax.swing.*;
@@ -32,8 +33,19 @@ public class login extends JFrame {
 
 
                 UserEntity user = db.login(username);
+                String role= String.valueOf(user.getRoleId());
                 if (Objects.equals(user.getPassword(), password)){
+                    if (Objects.equals(role, "1")) {
+                        // Redirect to create room page
+                        // Replace this line with the code to redirect to the create room page
+                        System.out.println("Redirecting to create room page...");
+                        login.super.dispose();
+                        JFrame frame4 = new Chatroom();
+                        frame4.setVisible(true);
+                        frame4.setSize(400, 500);
+                    }
                     System.out.println("Login successful!");
+
                 }
 
 //                if (user != null) {
