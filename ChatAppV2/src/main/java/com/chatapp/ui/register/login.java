@@ -6,12 +6,15 @@ import entity.UserEntity;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
+import java.util.Objects;
 
 public class login extends JFrame {
     private JTextField textField1;
     private JPasswordField passwordField;
     private JButton loginButton;
     private JPanel login;
+    private JTextField textField3;
 
     public Database db = new Database();
 
@@ -24,20 +27,22 @@ public class login extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String username = textField1.getText().trim();
-                String password = new String(passwordField.getPassword()).trim();
+                String password =textField3.getText().trim();
+//                String password = new String(passwordField.getPassword()).trim();
 
 
-                // Query the database for user with the provided username and password
-                UserEntity user = db.getUserByUsernameAndPassword(username, password);
-
-
-                if (user != null) {
-                    // User exists and login is successful
+                UserEntity user = db.search(username);
+                if (Objects.equals(user.getPassword(), password)){
                     System.out.println("Login successful!");
-                } else {
-                    // User does not exist or invalid credentials
-                    System.out.println("Invalid username or password!");
                 }
+
+//                if (user != null) {
+//                    // User exists and login is successful
+//                    System.out.println("Login successful!");
+//                } else {
+//                    // User does not exist or invalid credentials
+//                    System.out.println("Invalid username or password!");
+//                }
             }
         });
     }
