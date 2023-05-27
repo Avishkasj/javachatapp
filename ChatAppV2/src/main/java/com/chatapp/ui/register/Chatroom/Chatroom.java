@@ -1,5 +1,7 @@
 package com.chatapp.ui.register.Chatroom;
 
+import com.chatapp.chat.User;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,6 +25,8 @@ public class Chatroom extends JFrame {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setContentPane(roompanel);
         this.pack();
+
+        System.out.println(User.getNickname());
 
     createButton.addActionListener(new ActionListener() {
         @Override
