@@ -1,10 +1,7 @@
 package com.chatapp.database;
 
 import entity.UserEntity;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.Persistence;
+import jakarta.persistence.*;
 import org.hibernate.Session;
 
 public class Database {
@@ -48,6 +45,26 @@ public class Database {
 
         return user;
 
+    }
+
+    public UserEntity login(String username){
+        UserEntity user;
+        try {
+            et.begin();
+
+            String sqlQuery = "SELECT * FROM user WHERE username = :username";
+            Query query = em.createNativeQuery(sqlQuery, UserEntity.class);
+            query.setParameter("username", username);
+
+            user = (UserEntity) query.getSingleResult();
+
+        } finally {
+            if (et.isActive()) {
+                et.rollback();
+            }
+        }
+
+        return user;
     }
 
     public UserEntity UserPro(int id) {
