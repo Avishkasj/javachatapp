@@ -6,6 +6,8 @@ import entity.UserEntity;
 import jakarta.persistence.*;
 import org.hibernate.Session;
 
+import java.util.List;
+
 public class Database {
 
     public EntityManagerFactory emf;
@@ -81,6 +83,23 @@ public class Database {
 
         return user;
     }
+
+
+
+    public List<GroupsEntity> getRooms() {
+        List<GroupsEntity> chatrooms = null;
+        try {
+            String queryString = "SELECT g FROM GroupsEntity g";
+            Query query = em.createQuery(queryString);
+            chatrooms = query.getResultList();
+        } finally {
+            if (et.isActive()) {
+                et.rollback();
+            }
+        }
+        return chatrooms;
+    }
+
 
     public UserEntity UserPro(int id) {
         UserEntity user;
