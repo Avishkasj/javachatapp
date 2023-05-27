@@ -27,6 +27,8 @@ public class Client {
             }
 
 
+
+
         } catch (RemoteException | MalformedURLException | NotBoundException e) {
             throw new RuntimeException(e);
         }
