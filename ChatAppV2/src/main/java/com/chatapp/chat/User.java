@@ -78,6 +78,7 @@ public class User {
     }
 
     public static void setUser(UserEntity userEntity){
+        User.id = userEntity.getId();
         User.username = userEntity.getUsername();
         User.nickname = userEntity.getNickname();
         User.email = userEntity.getEmail();
