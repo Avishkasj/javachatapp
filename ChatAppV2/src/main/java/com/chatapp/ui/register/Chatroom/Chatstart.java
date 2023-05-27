@@ -26,17 +26,19 @@ public class Chatstart extends JFrame{
         tableModel = new DefaultTableModel(new Object[]{"ID", "Name", "Description"}, 0);
         table1.setModel(tableModel);
 
+        List<GroupsEntity> chatrooms = db.getRooms();
+
+        tableModel.setRowCount(0); // Clear existing data
+
+        for (GroupsEntity chatroom : chatrooms) {
+            Object[] rowData = {chatroom.getId(), chatroom.getName(), chatroom.getDescription()};
+            tableModel.addRow(rowData);
+        }
+
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                List<GroupsEntity> chatrooms = db.getRooms();
 
-                tableModel.setRowCount(0); // Clear existing data
-
-                for (GroupsEntity chatroom : chatrooms) {
-                    Object[] rowData = {chatroom.getId(), chatroom.getName(), chatroom.getDescription()};
-                    tableModel.addRow(rowData);
-                }
             }
         });
 }
