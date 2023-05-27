@@ -33,4 +33,20 @@ public class Database {
 
         }
     }
+
+    public UserEntity search(String username) {
+        UserEntity user;
+        try {
+            user = em.find(UserEntity.class, username);
+
+
+        } finally {
+            if (et.isActive()) {
+                et.rollback();
+            }
+        }
+
+        return user;
+
+    }
 }

@@ -6,6 +6,8 @@ import entity.UserEntity;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
+import java.util.Objects;
 
 public class login extends JFrame {
     private JTextField textField1;
@@ -27,17 +29,19 @@ public class login extends JFrame {
                 String password = new String(passwordField.getPassword()).trim();
 
 
-                // Query the database for user with the provided username and password
-                UserEntity user = db.getUserByUsernameAndPassword(username, password);
-
-
-                if (user != null) {
-                    // User exists and login is successful
+                UserEntity user = db.search(username);
+                if (Objects.equals(user.getPassword(), password)){
                     System.out.println("Login successful!");
-                } else {
-                    // User does not exist or invalid credentials
-                    System.out.println("Invalid username or password!");
                 }
+
+
+//                if (user != null) {
+//                    // User exists and login is successful
+//                    System.out.println("Login successful!");
+//                } else {
+//                    // User does not exist or invalid credentials
+//                    System.out.println("Invalid username or password!");
+//                }
             }
         });
     }
