@@ -1,6 +1,6 @@
 package com.chatapp.database;
 
-import entity.GroupsEntity;
+import com.chatapp.chat.User;
 import entity.UserEntity;
 import jakarta.persistence.*;
 import org.hibernate.Session;
@@ -23,19 +23,6 @@ public class Database {
         try {
             et.begin();
             em.persist(userEntity);
-            et.commit();
-        }finally {
-            if (et.isActive()){
-                et.rollback();
-            }
-
-        }
-    }
-
-    public void insertroom(GroupsEntity groupsEntity){
-        try {
-            et.begin();
-            em.persist(groupsEntity);
             et.commit();
         }finally {
             if (et.isActive()){
@@ -91,6 +78,29 @@ public class Database {
             }
         }
         return user;
+    }
+
+    public int update(UserEntity userEntity) {
+        int updated;
+        try {
+            et.begin();
+            updated = em.createQuery("update UserEntity us set us.username = :username, us.nickname = :nickname, us.email = :email, us.password = :password where us.id = :id")
+                    .setParameter("username", User.getUsername())
+                    .setParameter("nickname",User.getNickname() )
+                    .setParameter("email", User.getEmail())
+                    .setParameter("password", User.getPassword())
+                    .setParameter("id", User.getId())
+                    .executeUpdate();
+
+
+
+        } finally {
+            if (et.isActive()) {
+                et.rollback();
+            }
+
+        }
+        return updated;
     }
 
 
