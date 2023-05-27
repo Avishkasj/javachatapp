@@ -35,6 +35,7 @@ public class ChatImp extends UnicastRemoteObject implements Chat {
 
     @Override
     public String test(String text) throws RemoteException {
+        System.out.println(text);
         return text;
     }
 }
