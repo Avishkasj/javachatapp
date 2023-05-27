@@ -22,6 +22,7 @@ public class Groups  implements java.io.Serializable {
     public Groups() {
     }
 
+    
 	
     public Groups(String name, Date createdDate, Date createdTime, int status, int isDeleted) {
         this.name = name;
