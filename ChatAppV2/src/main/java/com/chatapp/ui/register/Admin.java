@@ -1,6 +1,7 @@
 package com.chatapp.ui.register;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Admin extends JFrame{
     private JPanel admin;
@@ -12,5 +13,10 @@ public class Admin extends JFrame{
         frame.setSize(500,700);
         frame.pack();
         frame.setVisible(true);
+    }
+
+    public Admin() throws HeadlessException {
+        JFrame frame2 = new JFrame("Admin");
+        frame2.setSize(400,600);
     }
 }
