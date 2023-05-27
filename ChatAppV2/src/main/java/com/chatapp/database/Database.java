@@ -1,5 +1,6 @@
 package com.chatapp.database;
 
+import entity.GroupsEntity;
 import entity.UserEntity;
 import jakarta.persistence.*;
 import org.hibernate.Session;
@@ -22,6 +23,19 @@ public class Database {
         try {
             et.begin();
             em.persist(userEntity);
+            et.commit();
+        }finally {
+            if (et.isActive()){
+                et.rollback();
+            }
+
+        }
+    }
+
+    public void insertroom(GroupsEntity groupsEntity){
+        try {
+            et.begin();
+            em.persist(groupsEntity);
             et.commit();
         }finally {
             if (et.isActive()){

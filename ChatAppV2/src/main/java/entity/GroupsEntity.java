@@ -79,7 +79,7 @@ public class GroupsEntity {
         return createdTime;
     }
 
-    public void setCreatedTime(Time createdTime) {
+    public void setCreatedTime(String currentTimeString) {
         this.createdTime = createdTime;
     }
 
@@ -91,7 +91,7 @@ public class GroupsEntity {
         this.status = status;
     }
 
-    public int getIsDeleted() {
+    public int getIsDeleted(Object o) {
         return isDeleted;
     }
 
