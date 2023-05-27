@@ -50,6 +50,7 @@ public class login extends JFrame {
                         } else if (Objects.equals(role, "2")) {
                             // Redirect to create room page
                             // Replace this line with the code to redirect to the create room page
+                            new UserProfile().run();
                             System.out.println("Redirecting to user page...");
                             login.super.dispose();
 

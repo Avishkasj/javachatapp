@@ -1,5 +1,6 @@
 package com.chatapp.ui.register;
 
+import com.chatapp.chat.User;
 import com.chatapp.database.Database;
 import entity.UserEntity;
 
@@ -12,19 +13,19 @@ public class UserProfile {
     private JTextField textEmail;
 
     public UserProfile() {
-        Database database = new Database();
-        UserEntity user = database.UserPro(3); // Replace 3 with the actual user ID
+//        Database database = new Database();
+//        UserEntity user = database.UserPro(3); // Replace 3 with the actual user ID
 
-        if (user != null) {
-            intID.setText(String.valueOf(user.getId()));
-            textUname.setText(user.getUsername());
-            textEmail.setText(user.getEmail());
-        } else {
-            System.out.println("User not found!");
-        }
+//        if (user != null) {
+            intID.setText(String.valueOf(User.getId()));
+            textUname.setText(User.getUsername());
+            textEmail.setText(User.getEmail());
+//        } else {
+//            System.out.println("User not found!");
+//        }
     }
 
-    public static void main(String[] args) {
+    public static void run() {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("User Profile");
             frame.setContentPane(new UserProfile().panel1);
