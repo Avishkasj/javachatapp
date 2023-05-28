@@ -88,13 +88,13 @@ public class UserDashboard extends JFrame {
                     System.out.println("Selected ID: " + selectedId);
                     System.out.println("Selected Name: " + selectedName);
                     System.out.println("Selected Description: " + selectedDescription);
-                    File file = new File("/Users/avishkasupun/Documents/Untitled/ChatAppV2/src/main/java/com/chatapp/image/user.png");
-                    byte[] imageData;
-                    try {
-                        imageData = Files.readAllBytes(file.toPath());
-                    } catch (IOException ex) {
-                        throw new RuntimeException(ex);
-                    }
+//                    File file = new File("https://github.com/Avishkasj/javachatapp/blob/06caf3667ef0832134ab56643644a7fd473aa4bd/ChatAppV2/src/main/java/com/chatapp/image/user.png");
+//                    byte[] imageData;
+//                    try {
+//                        imageData = Files.readAllBytes(file.toPath());
+//                    } catch (IOException ex) {
+//                        throw new RuntimeException(ex);
+//                    }
 
 
 
