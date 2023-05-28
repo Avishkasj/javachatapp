@@ -3,6 +3,7 @@ package com.chatapp.ui.register;
 import com.chatapp.chat.ChatUser;
 import com.chatapp.chat.Server.Client;
 import com.chatapp.chat.Server.Server;
+import com.chatapp.chat.User;
 import com.chatapp.database.Database;
 import entity.GroupsEntity;
 
@@ -95,7 +96,12 @@ public class UserDashboard extends JFrame {
                         throw new RuntimeException(ex);
                     }
 
-                    ChatUser cu = new ChatUser("avishka",11,"asj", "imageData".getBytes());
+                    String umane = User.getUsername();
+                    String nicname = User.getNickname();
+                    System.out.println("Nurrent user: - "+ umane);
+
+
+                    ChatUser cu = new ChatUser(umane,11,nicname, "imageData".getBytes());
                     SwingUtilities.invokeLater(UserChat::new);
 
 
