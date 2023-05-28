@@ -1,5 +1,8 @@
 package com.chatapp.ui.register;
 
+import com.chatapp.chat.ChatUser;
+import com.chatapp.chat.Server.Client;
+import com.chatapp.chat.Server.Server;
 import com.chatapp.database.Database;
 import entity.GroupsEntity;
 
@@ -7,6 +10,9 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.List;
 
 public class UserDashboard extends JFrame {
@@ -59,6 +65,48 @@ public class UserDashboard extends JFrame {
         });
 
 
+        SubBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                //get selected table value
+                int selectedRow = table1.getSelectedRow();
+
+                if (selectedRow != -1) {
+                    // Get the data from the selected row
+                    Object id = tableModel.getValueAt(selectedRow, 0);
+                    Object name = tableModel.getValueAt(selectedRow, 1);
+                    Object description = tableModel.getValueAt(selectedRow, 2);
+
+                    // Assign the values to variables
+                    int selectedId = Integer.parseInt(id.toString());
+                    String selectedName = name.toString(); // Assuming Name is of type String
+                    String selectedDescription = description.toString(); // Assuming Description is of type String
+
+                    // Use the variables as needed
+                    System.out.println("Selected ID: " + selectedId);
+                    System.out.println("Selected Name: " + selectedName);
+                    System.out.println("Selected Description: " + selectedDescription);
+                    File file = new File("/Users/avishkasupun/Documents/Untitled/ChatAppV2/src/main/java/com/chatapp/image/user.png");
+                    byte[] imageData;
+                    try {
+                        imageData = Files.readAllBytes(file.toPath());
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+
+                    ChatUser cu = new ChatUser("avishka",11,"asj", "imageData".getBytes());
+                    SwingUtilities.invokeLater(UserChat::new);
+
+
+
+                } else {
+                    System.out.println("No row selected.");
+                }
+
+
+            }
+        });
     }
 
 }
