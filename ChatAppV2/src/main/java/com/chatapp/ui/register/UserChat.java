@@ -31,7 +31,7 @@ public class UserChat extends JFrame{
         this.setContentPane(uchat);
 //        this.setSize(400,600);
         this.pack();
-        client.runClient(User.getGroupName());
+        client.runClient(User.getGroupName(), User.getGroupId());
 
 
 

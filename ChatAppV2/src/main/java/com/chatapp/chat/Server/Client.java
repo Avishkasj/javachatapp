@@ -13,12 +13,14 @@ public class Client {
     public Chat chatClient = null;
     Scanner input = new Scanner(System.in);
 
-    public void runClient(String name){
+    public void runClient(String name, int portid){
         String chat = "";
+
+        int port = 30000+portid;
 
         try {
 
-            chatClient = (Chat) Naming.lookup("rmi://192.168.8.119:3000/"+name);
+            chatClient = (Chat) Naming.lookup("rmi://192.168.8.119:"+port+"/"+name);
 
 
 ////            Observer remoteUser1 = new RemoteUser("User1");
@@ -48,7 +50,7 @@ public class Client {
 
 
     public static void main(String[] args) {
-        new Client().runClient("chat");
+        new Client().runClient("chat1", 1);
 
     }
 

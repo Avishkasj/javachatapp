@@ -73,12 +73,14 @@ public class Chatstart extends JFrame{
                     ge.setId(selectedId);
                     ge.setStatus(1);
 
+
+
+                    Server sc = new Server();
+                    sc.runServer(selectedName,selectedId);
+
                     int online = db.setOnline(ge);
 
                     System.out.println(online);
-
-                    Server sc = new Server();
-                    sc.runServer(selectedName);
 
 //                    new Server().runServer(selectedName);
 
