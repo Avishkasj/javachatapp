@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import com.chatapp.database.Database;
+import com.chatapp.ui.register.login;
 import entity.UserEntity;
 
 public class register extends JFrame {
@@ -15,6 +16,7 @@ public class register extends JFrame {
     private JButton registerButton;
     private JTextField textField3;
     private JTextField textField4;
+    private JButton button1;
 
     public Database db = new Database();
 
@@ -49,6 +51,12 @@ public class register extends JFrame {
                 user.setAvatar(imageData);
         db.insert(user);
                 System.out.println("User registered successfully!");
+            }
+        });
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                register.super.dispose();
             }
         });
     }

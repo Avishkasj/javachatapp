@@ -7,7 +7,6 @@ import entity.UserEntity;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.List;
 import java.util.Objects;
 
 public class login extends JFrame {
@@ -16,6 +15,7 @@ public class login extends JFrame {
     private JButton loginButton;
     private JPanel login;
     private JTextField textField3;
+    private JButton backButton;
 
     public Database db = new Database();
 
@@ -73,6 +73,12 @@ public class login extends JFrame {
 //                    // User does not exist or invalid credentials
 //                    System.out.println("Invalid username or password!");
 //                }
+            }
+        });
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                login.super.dispose();
             }
         });
     }
