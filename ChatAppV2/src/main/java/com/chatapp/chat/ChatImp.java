@@ -56,7 +56,6 @@ public class ChatImp extends UnicastRemoteObject implements Chat {
 
     @Override
     public Message broadcast() throws RemoteException {
-        System.out.println(newmsg.getMessage());
         return newmsg;
 
 
