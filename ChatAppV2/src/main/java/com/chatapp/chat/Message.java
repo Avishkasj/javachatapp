@@ -1,8 +1,11 @@
 package com.chatapp.chat;
 
 import java.io.Serializable;
+import java.util.Arrays;
 
-public class Messsage implements Serializable {
+public class Message implements Serializable {
+
+    private static final long serialVersionUID = 4395048792208962653L;
 
     private int id;
     private int groupId;
@@ -66,5 +69,10 @@ public class Messsage implements Serializable {
 
     public void setMstime(String mstime) {
         this.mstime = mstime;
+    }
+
+    @Override
+    public String toString() {
+        return message;
     }
 }
