@@ -97,7 +97,7 @@ public class User {
         User.roleId = roleId;
     }
 
-    public static void setUser(UserEntity userEntity){
+    public static void setUser(UserEntity userEntity) {
         User.id = userEntity.getId();
         User.username = userEntity.getUsername();
         User.nickname = userEntity.getNickname();
@@ -105,4 +105,14 @@ public class User {
         User.avatar = userEntity.getAvatar();
         User.password = userEntity.getPassword();
     }
+
+    public static void logout() {
+        setId(0);
+        setUsername("");
+        setNickname("");
+        setEmail("");
+        setAvatar("".getBytes());
+        setPassword("");
+    }
 }
+
