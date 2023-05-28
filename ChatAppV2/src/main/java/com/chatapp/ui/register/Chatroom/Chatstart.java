@@ -64,8 +64,10 @@ public class Chatstart extends JFrame{
                     System.out.println("Selected Name: " + selectedName);
                     System.out.println("Selected Description: " + selectedDescription);
 
-                    Server sc = new Server();
-                    sc.runServer();
+//                    Server sc = new Server();
+//                    sc.runServer();
+
+//                    new Server().runServer(selectedName);
 
                 } else {
                     System.out.println("No row selected.");
