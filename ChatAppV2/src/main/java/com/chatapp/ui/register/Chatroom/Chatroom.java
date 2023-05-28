@@ -51,7 +51,7 @@ public class Chatroom extends JFrame {
                 grope.setName(roomname);
                 grope.setDescription(discription);
                 grope.setIcon(null);
-                grope.setStatus(1);
+                grope.setStatus(0);
                 grope.setIsDeleted(0);
                 grope.setCreatedDate(Date.valueOf(currentDate));
                 grope.setCreatedTime(String.valueOf(currentDate));

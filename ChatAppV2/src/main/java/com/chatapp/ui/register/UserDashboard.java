@@ -1,8 +1,5 @@
 package com.chatapp.ui.register;
 
-import com.chatapp.chat.ChatUser;
-import com.chatapp.chat.Server.Client;
-import com.chatapp.chat.Server.Server;
 import com.chatapp.chat.User;
 import com.chatapp.database.Database;
 import entity.GroupsEntity;
@@ -11,9 +8,6 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.util.List;
 
 public class UserDashboard extends JFrame {
@@ -24,6 +18,7 @@ public class UserDashboard extends JFrame {
     private JButton SubBtn;
     private JPanel SubPanel;
     private JTable table1;
+    private JButton unsubscribeButton;
 
     public Database db = new Database();
     private DefaultTableModel tableModel;
@@ -43,9 +38,14 @@ public class UserDashboard extends JFrame {
 
         tableModel.setRowCount(0); // Clear existing data
 
+
+
         for (GroupsEntity chatroom : chatrooms) {
-            Object[] rowData = {chatroom.getId(), chatroom.getName(), chatroom.getDescription()};
-            tableModel.addRow(rowData);
+            if(chatroom.getStatus()==1){
+                Object[] rowData = { chatroom.getName(), chatroom.getDescription()};
+                tableModel.addRow(rowData);
+            }
+
         }
 
     

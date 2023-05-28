@@ -1,6 +1,5 @@
 package com.chatapp.ui.register.Chatroom;
 
-import com.chatapp.chat.Server.Server;
 import com.chatapp.database.Database;
 import entity.GroupsEntity;
 import javax.swing.*;
@@ -13,6 +12,7 @@ public class Chatstart extends JFrame{
     private JTable table1;
     private JButton startButton;
     private JPanel startpanel;
+    private JButton stopButton;
 
     public Database db = new Database();
     private DefaultTableModel tableModel;
@@ -25,7 +25,7 @@ public class Chatstart extends JFrame{
         this.setContentPane(startpanel);
         this.pack();
 
-        tableModel = new DefaultTableModel(new Object[]{"ID", "Name", "Description"}, 0);
+        tableModel = new DefaultTableModel(new Object[]{"Name", "Description", "Status"}, 0);
         table1.setModel(tableModel);
 
         List<GroupsEntity> chatrooms = db.getRooms();
@@ -33,12 +33,15 @@ public class Chatstart extends JFrame{
         tableModel.setRowCount(0); // Clear existing data
 
         for (GroupsEntity chatroom : chatrooms) {
-            Object[] rowData = {chatroom.getId(), chatroom.getName(), chatroom.getDescription()};
+            String status;
+            if (chatroom.getStatus() == 1) {
+                status = "Running";
+            } else {
+                status = "Stopped";
+            }
+            Object[] rowData = {chatroom.getName(), chatroom.getDescription(), status};
             tableModel.addRow(rowData);
         }
-
-
-
 
 
         startButton.addActionListener(new ActionListener() {
