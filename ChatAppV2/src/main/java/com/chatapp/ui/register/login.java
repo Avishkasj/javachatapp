@@ -4,7 +4,6 @@ import com.chatapp.chat.User;
 import com.chatapp.database.Database;
 import com.chatapp.ui.register.Chatroom.Chatroom;
 import entity.UserEntity;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
