@@ -39,7 +39,7 @@ public class UserDashboard extends JFrame {
         tableModel.setRowCount(0); // Clear existing data
 
 
-        
+
         for (GroupsEntity chatroom : chatrooms) {
             if(chatroom.getStatus()==1){
                 Object[] rowData = { chatroom.getName(), chatroom.getDescription()};
