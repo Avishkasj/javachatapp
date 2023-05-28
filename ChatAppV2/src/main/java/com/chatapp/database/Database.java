@@ -136,6 +136,24 @@ public class Database {
         return updated;
     }
 
+    public int setOnline(GroupsEntity groupsEntity) {
+        int updated;
+        try {
+            et.begin();
+            updated = em.createQuery("update GroupsEntity ge set ge.status = :status where ge.id = :id")
+                    .setParameter("status", groupsEntity.getStatus())
+                    .setParameter("id", groupsEntity.getId())
+                    .executeUpdate();
+
+        } finally {
+            if (et.isActive()) {
+                et.rollback();
+            }
+
+        }
+        return updated;
+    }
+
 
     public void close(){
         em.close();

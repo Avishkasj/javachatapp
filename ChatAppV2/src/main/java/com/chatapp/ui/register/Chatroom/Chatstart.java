@@ -64,8 +64,16 @@ public class Chatstart extends JFrame{
                     System.out.println("Selected Name: " + selectedName);
                     System.out.println("Selected Description: " + selectedDescription);
 
-//                    Server sc = new Server();
-//                    sc.runServer();
+                    GroupsEntity ge = new GroupsEntity();
+                    ge.setId(selectedId);
+                    ge.setStatus(1);
+
+                    int online = db.setOnline(ge);
+
+                    System.out.println(online);
+
+                    Server sc = new Server();
+                    sc.runServer(selectedName);
 
 //                    new Server().runServer(selectedName);
 

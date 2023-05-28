@@ -10,13 +10,13 @@ import java.rmi.registry.LocateRegistry;
 
 public class Server {
 
-    public void runServer(){
+    public void runServer(String name){
         try {
             Chat chat = new ChatImp();
 
             LocateRegistry.createRegistry(3000);
 
-            Naming.rebind("rmi://192.168.8.119:3000/chat", chat);
+            Naming.rebind("rmi://192.168.8.119:3000/"+name+"chat", chat);
 
             System.out.println("Server up and running");
 
@@ -26,7 +26,7 @@ public class Server {
     }
 
     public static void main(String[] args) {
-        new Server().runServer();
+        new Server().runServer("chat");
     }
 
 
