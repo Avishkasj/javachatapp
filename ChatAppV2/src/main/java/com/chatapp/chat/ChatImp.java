@@ -9,6 +9,13 @@ import java.util.List;
 public class ChatImp extends UnicastRemoteObject implements Chat {
 
     private List<Observer> observers = new ArrayList<>();
+
+    public List<Message> newMessage = new ArrayList<>();
+
+    public Message newmsg = new Message();
+
+
+
     public ChatImp() throws RemoteException {
         super();
     }
@@ -42,12 +49,17 @@ public class ChatImp extends UnicastRemoteObject implements Chat {
 
     @Override
     public void sendMessage(Message msg) throws RemoteException {
-
+        newMessage.add(msg);
+        newmsg = msg;
+        System.out.println(newmsg.getMessage());
     }
 
     @Override
     public Message broadcast() throws RemoteException {
-        return null;
+        System.out.println(newmsg.getMessage());
+        return newmsg;
+
+
     }
 
     @Override
