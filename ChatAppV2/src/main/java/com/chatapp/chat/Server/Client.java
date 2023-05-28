@@ -10,14 +10,16 @@ import java.util.Scanner;
 
 public class Client {
 
+    public Chat chatClient = null;
+    Scanner input = new Scanner(System.in);
+
     public void runClient(){
         String chat = "";
 
-        Chat chatClient = null;
-        Scanner input = new Scanner(System.in);
-
         try {
+
             chatClient = (Chat) Naming.lookup("rmi://192.168.8.119:3000/chat");
+
 
 //            Observer remoteUser1 = new RemoteUser("User1");
             Observer remoteUser2 = new RemoteUser("User2");
@@ -43,8 +45,11 @@ public class Client {
         }
     }
 
+
+
     public static void main(String[] args) {
         new Client().runClient();
+
     }
 
 }
