@@ -35,7 +35,7 @@ public class Chatstart extends JFrame{
         for (GroupsEntity chatroom : chatrooms) {
             if(chatroom.getStatus()==1){
                 System.out.println(chatroom.getStatus());
-                Object[] rowData = {chatroom.getId(), chatroom.getName(), chatroom.getDescription()};
+                Object[] rowData = { chatroom.getName(), chatroom.getDescription()};
                 tableModel.addRow(rowData);
             }
 
