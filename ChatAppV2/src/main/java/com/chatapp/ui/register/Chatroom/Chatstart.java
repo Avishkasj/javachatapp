@@ -26,7 +26,7 @@ public class Chatstart extends JFrame{
         this.setContentPane(startpanel);
         this.pack();
 
-        tableModel = new DefaultTableModel(new Object[]{"Name", "Description", "Status"}, 0);
+        tableModel = new DefaultTableModel(new Object[]{"id","Name", "Description", "Status"}, 0);
         table1.setModel(tableModel);
 
         List<GroupsEntity> chatrooms = db.getRooms();
@@ -40,7 +40,7 @@ public class Chatstart extends JFrame{
             } else {
                 status = "Stopped";
             }
-            Object[] rowData = {chatroom.getName(), chatroom.getDescription(), status};
+            Object[] rowData = {chatroom.getId(),chatroom.getName(), chatroom.getDescription(), status};
             tableModel.addRow(rowData);
         }
 
@@ -67,6 +67,7 @@ public class Chatstart extends JFrame{
                     System.out.println("Selected ID: " + selectedId);
                     System.out.println("Selected Name: " + selectedName);
                     System.out.println("Selected Description: " + selectedDescription);
+
 
                     GroupsEntity ge = new GroupsEntity();
                     ge.setId(selectedId);
