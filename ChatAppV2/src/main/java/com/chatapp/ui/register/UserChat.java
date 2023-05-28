@@ -2,6 +2,8 @@ package com.chatapp.ui.register;
 
 import com.chatapp.chat.Chat;
 import com.chatapp.chat.Message;
+import com.chatapp.chat.Observer;
+import com.chatapp.chat.RemoteUser;
 import com.chatapp.chat.Server.Client;
 
 import javax.swing.*;
@@ -63,6 +65,7 @@ public class UserChat {
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
 
+
             Thread updateMessagesThread = new Thread() {
                 @Override
                 public void run() {
@@ -70,9 +73,10 @@ public class UserChat {
                         try {
                             Message message = chatClient.broadcast();
                             if (lastms.equals(message.getMessage())){
-                                SwingUtilities.invokeLater(() -> model.addElement(message));
+                                continue;
                             }else {
-                                break;
+                                lastms = message.getMessage();
+                                SwingUtilities.invokeLater(() -> model.addElement(message));
                             }
                             Thread.sleep(100);
                         } catch (RemoteException e) {
@@ -85,8 +89,19 @@ public class UserChat {
             };
             updateMessagesThread.start();
 
+
+
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public void getMessages(){
+        try {
+            Observer remoteUser1 = new RemoteUser("User1");
+            chatClient.registerObserver(remoteUser1);
+        } catch (RemoteException e) {
+            throw new RuntimeException(e);
         }
     }
 
