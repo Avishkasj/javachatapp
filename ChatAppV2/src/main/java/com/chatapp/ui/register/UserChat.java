@@ -1,9 +1,6 @@
 package com.chatapp.ui.register;
 
-import com.chatapp.chat.Chat;
-import com.chatapp.chat.Message;
-import com.chatapp.chat.Observer;
-import com.chatapp.chat.RemoteUser;
+import com.chatapp.chat.*;
 import com.chatapp.chat.Server.Client;
 
 import javax.swing.*;
@@ -49,6 +46,7 @@ public class UserChat {
                     String messagebox = textField.getText();
                     Message message = new Message();
                     message.setMessage(textField.getText());
+                    message.setUserId(10);
                     try {
                         chatClient.sendMessage(message);
                     } catch (RemoteException ex) {
@@ -115,7 +113,7 @@ public class UserChat {
 
         public Component getListCellRendererComponent(JList<? extends Message> list, Message message, int index,
                                                       boolean isSelected, boolean cellHasFocus) {
-            setText(message.getMessage());
+            setText(User.getUsername()+":- "+message.getMessage());
             return this;
         }
     }
