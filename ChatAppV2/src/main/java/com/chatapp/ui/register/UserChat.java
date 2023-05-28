@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.rmi.RemoteException;
 
-public class UserChat {
+public class UserChat extends JFrame{
     private JPanel uchat;
 
     Client client = new Client();
@@ -27,7 +27,12 @@ public class UserChat {
     JButton button = new JButton("Send");
 
     public UserChat() {
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setContentPane(uchat);
+//        this.setSize(400,600);
+        this.pack();
         client.runClient();
+
 
         try {
             chatClient = client.chatClient;
