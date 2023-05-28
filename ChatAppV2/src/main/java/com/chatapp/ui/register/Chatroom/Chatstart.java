@@ -25,7 +25,7 @@ public class Chatstart extends JFrame{
         this.setContentPane(startpanel);
         this.pack();
 
-        tableModel = new DefaultTableModel(new Object[]{"ID", "Name", "Description"}, 0);
+        tableModel = new DefaultTableModel(new Object[]{"Name", "Description", "Status"}, 0);
         table1.setModel(tableModel);
 
         List<GroupsEntity> chatrooms = db.getRooms();
@@ -33,11 +33,14 @@ public class Chatstart extends JFrame{
         tableModel.setRowCount(0); // Clear existing data
 
         for (GroupsEntity chatroom : chatrooms) {
-                System.out.println(chatroom.getStatus());
-                Object[] rowData = { chatroom.getName(), chatroom.getDescription()};
-                tableModel.addRow(rowData);
-
-
+            String status;
+            if (chatroom.getStatus() == 1) {
+                status = "Running";
+            } else {
+                status = "Stopped";
+            }
+            Object[] rowData = {chatroom.getName(), chatroom.getDescription(), status};
+            tableModel.addRow(rowData);
         }
 
 
