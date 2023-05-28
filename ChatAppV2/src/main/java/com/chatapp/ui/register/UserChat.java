@@ -48,6 +48,7 @@ public class UserChat {
                     message.setMessage(textField.getText());
                     message.setUserId(10);
                     message.setNickname(User.getNickname());
+                    message.setAvatar(User.getAvatar());
                     try {
                         chatClient.sendMessage(message);
                     } catch (RemoteException ex) {
@@ -106,15 +107,51 @@ public class UserChat {
         SwingUtilities.invokeLater(UserChat::new);
     }
 
-    private class MessageListRenderer extends JLabel implements ListCellRenderer<Message> {
+    private class MessageListRenderer extends JPanel implements ListCellRenderer<Message> {
+        private JLabel nicknameLabel;
+        private JLabel messageLabel;
+        private JLabel avatarLabel;
+
         public MessageListRenderer() {
             setOpaque(true);
             setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+            setLayout(new BorderLayout());
+
+            avatarLabel = new JLabel();
+            nicknameLabel = new JLabel();
+            messageLabel = new JLabel();
+
+            add(avatarLabel, BorderLayout.WEST);
+            JPanel textPanel = new JPanel(new BorderLayout());
+            textPanel.add(nicknameLabel, BorderLayout.NORTH);
+            textPanel.add(messageLabel, BorderLayout.CENTER);
+            add(textPanel, BorderLayout.CENTER);
         }
 
         public Component getListCellRendererComponent(JList<? extends Message> list, Message message, int index,
                                                       boolean isSelected, boolean cellHasFocus) {
-            setText(message.getNickname()+":- "+message.getMessage());
+            nicknameLabel.setText(message.getNickname());
+            messageLabel.setText(message.getMessage());
+
+            if (message.getAvatar() != null) {
+                ImageIcon avatarIcon = new ImageIcon(message.getAvatar());
+                Image scaledAvatar = avatarIcon.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+                avatarIcon = new ImageIcon(scaledAvatar);
+                avatarLabel.setIcon(avatarIcon);
+            } else {
+                // Set a default avatar image if no avatar is available
+                ImageIcon defaultAvatarIcon = new ImageIcon("com/chatapp/image/user.png");
+                avatarLabel.setIcon(defaultAvatarIcon);
+            }
+
+            if (isSelected) {
+                setBackground(list.getSelectionBackground());
+                setForeground(list.getSelectionForeground());
+            } else {
+                setBackground(list.getBackground());
+                setForeground(list.getForeground());
+            }
+
             return this;
         }
     }
