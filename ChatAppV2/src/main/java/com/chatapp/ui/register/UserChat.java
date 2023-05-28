@@ -89,8 +89,6 @@ public class UserChat {
             };
             updateMessagesThread.start();
 
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }
