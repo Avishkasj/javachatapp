@@ -34,8 +34,12 @@ public class UserChat extends JFrame{
         client.runClient(User.getGroupName());
 
 
+
         try {
             chatClient = client.chatClient;
+            Message stms = new Message();
+            stms.setMessage("Start Chat");
+            chatClient.sendMessage(stms);
 
             list.setModel(model);
             list.setCellRenderer(new MessageListRenderer());
