@@ -19,7 +19,6 @@ public class Chatroom extends JFrame {
     private JPanel roompanel;
     private JTextArea textArea1;
     private JButton availableRoomsButton;
-    private JButton button1;
 
     public Database db = new Database();
 
@@ -75,13 +74,6 @@ public class Chatroom extends JFrame {
                 JFrame frame8 = new Chatstart();
                 frame8.setVisible(true);
                 frame8.setSize(400, 500);
-            }
-        });
-        button1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                User.logout();
-                Chatroom.super.dispose();
             }
         });
     }
