@@ -2,6 +2,7 @@ package com.chatapp.ui.register;
 
 import com.chatapp.chat.User;
 import com.chatapp.database.Database;
+import com.chatapp.ui.register.register.register;
 import entity.GroupsEntity;
 
 import javax.swing.*;
@@ -19,6 +20,7 @@ public class UserDashboard extends JFrame {
     private JPanel SubPanel;
     private JTable table1;
     private JButton unsubscribeButton;
+    private JButton button1;
 
     public Database db = new Database();
     private DefaultTableModel tableModel;
@@ -113,6 +115,14 @@ public class UserDashboard extends JFrame {
                     System.out.println("No row selected.");
                 }
 
+
+            }
+        });
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                User.logout();
+                UserDashboard.super.dispose();
 
             }
         });
