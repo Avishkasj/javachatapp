@@ -13,6 +13,26 @@ public class User {
     private static String password;
     private static int roleId;
 
+    private static int groupId;
+
+    public static int getGroupId() {
+        return groupId;
+    }
+
+    public static void setGroupId(int groupId) {
+        User.groupId = groupId;
+    }
+
+    public static String getGroupName() {
+        return groupName;
+    }
+
+    public static void setGroupName(String groupName) {
+        User.groupName = groupName;
+    }
+
+    private static String groupName;
+
     public static int getId() {
         return id;
     }

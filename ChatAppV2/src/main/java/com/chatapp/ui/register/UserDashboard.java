@@ -96,11 +96,12 @@ public class UserDashboard extends JFrame {
 //                        throw new RuntimeException(ex);
 //                    }
 
-
+                    User.setGroupId(selectedId);
+                    User.setGroupName(selectedName);
 
                     String umane = User.getUsername();
                     String nicname = User.getNickname();
-                    System.out.println("Nurrent user: - "+ umane);
+                    System.out.println("Current user: - "+ umane);
 
 
 //                    ChatUser cu = new ChatUser(umane,11,nicname, "imageData".getBytes());

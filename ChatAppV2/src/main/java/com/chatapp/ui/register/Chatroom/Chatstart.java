@@ -1,5 +1,6 @@
 package com.chatapp.ui.register.Chatroom;
 
+import com.chatapp.chat.Server.Server;
 import com.chatapp.database.Database;
 import entity.GroupsEntity;
 import javax.swing.*;
