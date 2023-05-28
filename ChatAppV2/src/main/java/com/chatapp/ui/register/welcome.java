@@ -17,10 +17,22 @@ public class welcome extends JFrame{
         registerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                welcome.super.dispose();
+
                 JFrame frame1 = new register();
                 frame1.setVisible(true);
                 frame1.setSize(400, 500);
+                welcome.super.dispose();
+
+
+
+//                JFrame frame1 = new register();
+//                frame1.setVisible(true);
+//                frame1.setSize(400, 500);
+//
+//                // Assuming the registerButton is part of the welcome frame
+//                JButton button = (JButton) e.getSource();
+//                JFrame welcome = (JFrame) SwingUtilities.getWindowAncestor(button);
+//                welcome.dispose();
             }
         });
         loginButton.addActionListener(new ActionListener() {

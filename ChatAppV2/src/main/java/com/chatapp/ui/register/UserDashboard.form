@@ -51,25 +51,28 @@
       </component>
       <component id="5b78c" class="javax.swing.JButton" binding="profileButton" default-binding="true">
         <constraints>
-          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Profile"/>
+          <icon value="img/user.png"/>
+          <text value="Profile          "/>
         </properties>
       </component>
       <component id="105b4" class="javax.swing.JButton" binding="SubBtn">
         <constraints>
-          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Subscribe"/>
+          <icon value="img/add.png"/>
+          <text value="Subscribe    "/>
         </properties>
       </component>
       <component id="cbb63" class="javax.swing.JButton" binding="unsubscribeButton" default-binding="true">
         <constraints>
-          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <icon value="img/remove.png"/>
           <text value="Unsubscribe"/>
         </properties>
       </component>
