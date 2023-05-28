@@ -144,6 +144,20 @@ public class UserChat {
                 avatarLabel.setIcon(defaultAvatarIcon);
             }
 
+            if (message.getUserId() == 10) { // Assuming 10 is the ID of the current user
+                setAlignmentX(RIGHT_ALIGNMENT);
+                avatarLabel.setAlignmentX(RIGHT_ALIGNMENT);
+                nicknameLabel.setAlignmentX(RIGHT_ALIGNMENT);
+                messageLabel.setAlignmentX(RIGHT_ALIGNMENT);
+                setBackground(new Color(200, 220, 255)); // Set background color for sent messages
+            } else {
+                setAlignmentX(LEFT_ALIGNMENT);
+                avatarLabel.setAlignmentX(LEFT_ALIGNMENT);
+                nicknameLabel.setAlignmentX(LEFT_ALIGNMENT);
+                messageLabel.setAlignmentX(LEFT_ALIGNMENT);
+                setBackground(list.getBackground());
+            }
+
             if (isSelected) {
                 setBackground(list.getSelectionBackground());
                 setForeground(list.getSelectionForeground());
