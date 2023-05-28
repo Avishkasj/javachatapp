@@ -33,11 +33,10 @@ public class Chatstart extends JFrame{
         tableModel.setRowCount(0); // Clear existing data
 
         for (GroupsEntity chatroom : chatrooms) {
-            if(chatroom.getStatus()==1){
                 System.out.println(chatroom.getStatus());
                 Object[] rowData = { chatroom.getName(), chatroom.getDescription()};
                 tableModel.addRow(rowData);
-            }
+
 
         }
 
