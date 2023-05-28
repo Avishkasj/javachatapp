@@ -47,6 +47,7 @@ public class UserChat {
                     Message message = new Message();
                     message.setMessage(textField.getText());
                     message.setUserId(10);
+                    message.setNickname(User.getNickname());
                     try {
                         chatClient.sendMessage(message);
                     } catch (RemoteException ex) {
@@ -113,7 +114,7 @@ public class UserChat {
 
         public Component getListCellRendererComponent(JList<? extends Message> list, Message message, int index,
                                                       boolean isSelected, boolean cellHasFocus) {
-            setText(User.getUsername()+":- "+message.getMessage());
+            setText(message.getNickname()+":- "+message.getMessage());
             return this;
         }
     }
