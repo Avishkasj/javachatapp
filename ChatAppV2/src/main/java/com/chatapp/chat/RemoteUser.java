@@ -11,9 +11,9 @@ public class RemoteUser extends UnicastRemoteObject implements Observer {
     }
 
     @Override
-    public void receiveMessage(Message message) throws RemoteException {
+    public void receiveMessage(String text) throws RemoteException {
 
-        System.out.println(username + " received message: " + message.getMessage());
+        System.out.println(username + " received message: " + text);
     }
 
 
