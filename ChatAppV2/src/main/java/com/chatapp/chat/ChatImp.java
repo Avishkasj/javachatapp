@@ -14,6 +14,10 @@ public class ChatImp extends UnicastRemoteObject implements Chat {
 
     private List<Observer> observers = new ArrayList<>();
 
+//--
+    private List<Integer>sub=new ArrayList<Integer>();
+
+
     public List<Message> newMessage = new ArrayList<>();
 
     public Message newmsg = new Message();
