@@ -123,6 +123,8 @@ public class UserDashboard extends JFrame {
 
                     try {
                         chatClient.subscribe(User.getId());
+//
+
                     } catch (RemoteException ex) {
                         throw new RuntimeException(ex);
                     }
@@ -140,6 +142,60 @@ public class UserDashboard extends JFrame {
                 User.logout();
                 UserDashboard.super.dispose();
 
+            }
+        });
+        unsubscribeButton.addActionListener(new ActionListener() {
+
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Check if the client is already subscribed
+                try {
+                    Client client = new Client();
+                    Chat chatClient = null;
+                    //get selected table value
+                    int selectedRow = table1.getSelectedRow();
+
+                    if (selectedRow != -1) {
+                        // Get the data from the selected row
+                        Object id = tableModel.getValueAt(selectedRow, 0);
+                        Object name = tableModel.getValueAt(selectedRow, 1);
+                        Object description = tableModel.getValueAt(selectedRow, 2);
+
+                        // Assign the values to variables
+                        int selectedId = Integer.parseInt(id.toString());
+                        String selectedName = name.toString(); // Assuming Name is of type String
+                        String selectedDescription = description.toString(); // Assuming Description is of type String
+
+                        // Use the variables as needed
+                        System.out.println("Selected ID: " + selectedId);
+                        System.out.println("Selected Name: " + selectedName);
+                        System.out.println("Selected Description: " + selectedDescription);
+//                    File file = new File("https://github.com/Avishkasj/javachatapp/blob/06caf3667ef0832134ab56643644a7fd473aa4bd/ChatAppV2/src/main/java/com/chatapp/image/user.png");
+//                    byte[] imageData;
+//                    try {
+//                        imageData = Files.readAllBytes(file.toPath());
+//                    } catch (IOException ex) {
+//                        throw new RuntimeException(ex);
+//                    }
+                        client.runClient(selectedName, selectedId);
+                        chatClient = client.chatClient;
+                        System.out.println(chatClient.is_subscribe(User.getId()));
+                        if (chatClient.is_subscribe(User.getId())) {
+                            try {
+                                // Unsubscribe the user
+                                chatClient.unsubscribe(User.getId());
+                                System.out.println("Unsubscribed from the chat.");
+                            } catch (RemoteException ex) {
+                                throw new RuntimeException(ex);
+                            }
+                        } else {
+                            System.out.println("Not subscribed to any chat.");
+                        }
+                    }
+                } catch (RemoteException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
     }

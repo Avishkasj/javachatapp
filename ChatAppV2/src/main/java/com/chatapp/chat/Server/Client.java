@@ -20,7 +20,7 @@ public class Client {
 
         try {
 
-            chatClient = (Chat) Naming.lookup("rmi://192.168.8.119:"+port+"/"+name);
+            chatClient = (Chat) Naming.lookup("rmi://localhost:"+port+"/"+name);
 
             //observer
 //            Chat chatClient = new ChatImp();

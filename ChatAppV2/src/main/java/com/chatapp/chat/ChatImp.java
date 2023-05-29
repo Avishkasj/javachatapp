@@ -21,6 +21,8 @@ public class ChatImp extends UnicastRemoteObject implements Chat {
 //--
     private List<Integer>sub=new ArrayList<>();
 
+    private List<Integer>unsub=new ArrayList<>();
+
 
     public List<Message> newMessage = new ArrayList<>();
 
@@ -52,12 +54,21 @@ public class ChatImp extends UnicastRemoteObject implements Chat {
 
     @Override
     public void subscribe(int userId) throws RemoteException {
-            sub.add(userId);
+        sub.add(userId);
+        System.out.println("subscribed successfully");
+    }
+
+    //--
+    @Override
+    public void unsubscribe(int userId) throws RemoteException {
+        sub.remove(Integer.valueOf(userId));
+        System.out.println("unsubscribed successfully");
+
     }
 
     @Override
-    public boolean is_subscribe() throws RemoteException {
-        return false;
+    public boolean is_subscribe(int userId) throws RemoteException {
+        return sub.contains(userId);
     }
 
     @Override

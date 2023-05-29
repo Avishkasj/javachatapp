@@ -26,7 +26,7 @@ public class Server {
 
             LocateRegistry.createRegistry(port);
 
-            Naming.rebind("rmi://192.168.8.119:" + port + "/" + name, chat);
+            Naming.rebind("rmi://localhost:" + port + "/" + name, chat);
 
             chatInstances.put(name, chat);
 
