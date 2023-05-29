@@ -100,5 +100,48 @@ public class Chatstart extends JFrame{
                 Chatstart.super.dispose();
             }
         });
+        stopButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //get selected valuve
+                int selectedRow = table1.getSelectedRow();
+
+                if (selectedRow != -1) {
+                    // Get the data from the selected row
+                    Object id = tableModel.getValueAt(selectedRow, 0);
+                    Object name = tableModel.getValueAt(selectedRow, 1);
+                    Object description = tableModel.getValueAt(selectedRow, 2);
+
+                    // Assign the values to variables
+                    int selectedId = Integer.parseInt(id.toString());
+                    String selectedName = name.toString(); // Assuming Name is of type String
+                    String selectedDescription = description.toString(); // Assuming Description is of type String
+
+                    // Use the variables as needed
+                    System.out.println("Selected ID: " + selectedId);
+                    System.out.println("Selected Name: " + selectedName);
+                    System.out.println("Selected Description: " + selectedDescription);
+
+
+                    GroupsEntity ge = new GroupsEntity();
+                    ge.setId(selectedId);
+                    ge.setStatus(0);
+
+
+
+                    Server sc = new Server();
+                    sc.stopServer(selectedName,selectedId);
+
+                    int online = db.setOnline(ge);
+
+                    System.out.println(online);
+
+//                    new Server().runServer(selectedName);
+
+                } else {
+                    System.out.println("No row selected.");
+                }
+            }
+        });
     }
 }
