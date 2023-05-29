@@ -22,20 +22,33 @@ public class Client {
 
             chatClient = (Chat) Naming.lookup("rmi://192.168.8.119:"+port+"/"+name);
 
-
-////            Observer remoteUser1 = new RemoteUser("User1");
-//            Observer remoteUser2 = new RemoteUser("User2");
-//
-////            chatClient.registerObserver(remoteUser1);
-//            chatClient.registerObserver(remoteUser2);
+            //observer
+//            Chat chatClient = new ChatImp();
+//            Observer user2 = new RemoteUser("User2");
+//            chatClient.registerObserver(user2);
 //
 //            Message msg = new Message();
+//            msg.setMessage("User registered succussfully!");
+//
+//            chatClient.sendMessage(msg);
+//            chatClient.notifyObservers();
+//               System.out.println(msg);
+
+
+//            Observer newUser= new RemoteUser(User.getNickname());
+////            Observer remoteUser2 = new RemoteUser("User2");
+////
+//            chatClient.registerObserver(newUser);
+            //chatClient.notifyObservers("New User is registered...");
+//            chatClient.registerObserver(remoteUser2);
+//
+  //          Message msg = new Message();
 //
 //            while (true){
 //                System.out.println("Enter the message : ");
 //                String ms = input.nextLine();
 //                msg.setMessage(ms);
-//                chatClient.notifyObservers(msg);
+     //        chatClient.notifyObservers(msg);
 ////                System.out.println(chat);
 //            }
 

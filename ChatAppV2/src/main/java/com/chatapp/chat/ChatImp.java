@@ -23,6 +23,7 @@ public class ChatImp extends UnicastRemoteObject implements Chat {
     @Override
     public void registerObserver(com.chatapp.chat.Observer observer) throws RemoteException {
         observers.add(observer);
+        System.out.println("New user added....");
     }
 
     @Override
@@ -31,9 +32,9 @@ public class ChatImp extends UnicastRemoteObject implements Chat {
     }
 
     @Override
-    public void notifyObservers(Message message) throws RemoteException {
+    public void notifyObservers(String text) throws RemoteException {
         for (Observer observer : observers) {
-            observer.receiveMessage(message);
+            observer.receiveMessage(text);
         }
     }
 

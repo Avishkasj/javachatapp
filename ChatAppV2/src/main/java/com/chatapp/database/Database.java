@@ -114,6 +114,11 @@ public class Database {
     }
 
     public int update(UserEntity userEntity) {
+//        User.setUser(userEntity);
+
+        User.setUsername(userEntity.getUsername());
+        User.setEmail(userEntity.getEmail());
+
         int updated;
         try {
             et.begin();
@@ -159,8 +164,6 @@ public class Database {
         em.close();
         emf.close();
     }
-
-
 
 
 }
