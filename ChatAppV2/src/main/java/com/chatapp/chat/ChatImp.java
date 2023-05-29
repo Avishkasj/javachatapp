@@ -1,5 +1,8 @@
 package com.chatapp.chat;
 
+import com.chatapp.database.Database;
+import entity.FilesEntity;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -8,6 +11,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 
 public class ChatImp extends UnicastRemoteObject implements Chat {
@@ -67,24 +71,38 @@ public class ChatImp extends UnicastRemoteObject implements Chat {
 
     @Override
     public void saveToFile() throws RemoteException {
-        try (FileOutputStream fos = new FileOutputStream("messages.ser");
-             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+        try {
+            Random random = new Random();
+            int rand = random.nextInt();
+            String fileName = rand + "_messages.ser";
 
-            oos.writeObject(newMessage);
+            try (FileOutputStream fos = new FileOutputStream(fileName);
+                 ObjectOutputStream oos = new ObjectOutputStream(fos)) {
 
-            System.out.println("Messages saved to file: messages.ser");
+                oos.writeObject(newMessage);
 
-            // Read and print the file contents for verification
-            try (FileInputStream fis = new FileInputStream("messages.ser");
-                 ObjectInputStream ois = new ObjectInputStream(fis)) {
+                System.out.println("Messages saved to file: " + fileName);
 
-                List<Message> messages = (List<Message>) ois.readObject();
-                System.out.println("Read messages from file:");
-                for (Message message : messages) {
-                    System.out.println(message);
+                // Read and print the file contents for verification
+                try (FileInputStream fis = new FileInputStream(fileName);
+                     ObjectInputStream ois = new ObjectInputStream(fis)) {
+
+                    List<Message> messages = (List<Message>) ois.readObject();
+                    System.out.println("Read messages from file:");
+                    for (Message message : messages) {
+                        System.out.println(message);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+
+                Database db = new Database();
+                FilesEntity fe = new FilesEntity();
+                fe.setChatId(rand);
+                fe.setLink(fileName);
+                fe.setIsDeleted(0);
+
+                db.insertfile(fe);
             }
         } catch (Exception e) {
             e.printStackTrace();
