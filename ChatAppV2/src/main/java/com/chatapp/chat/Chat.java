@@ -8,7 +8,7 @@ public interface Chat extends Remote {
     void registerObserver(Observer observer) throws RemoteException;
     void removeObserver(Observer observer) throws RemoteException;
     void notifyObservers(String text) throws RemoteException;
-    public void subscribe() throws RemoteException;
+    public void subscribe(int userId) throws RemoteException;
     public boolean is_subscribe() throws RemoteException;
     public void sendMessage(Message msg) throws RemoteException;
 

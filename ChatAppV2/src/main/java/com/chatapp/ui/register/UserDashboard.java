@@ -1,5 +1,7 @@
 package com.chatapp.ui.register;
 
+import com.chatapp.chat.Chat;
+import com.chatapp.chat.Server.Client;
 import com.chatapp.chat.User;
 import com.chatapp.database.Database;
 import com.chatapp.ui.register.register.register;
@@ -9,6 +11,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.rmi.RemoteException;
 import java.util.List;
 
 public class UserDashboard extends JFrame {
@@ -72,6 +75,12 @@ public class UserDashboard extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+
+                //-
+                Client client = new Client();
+                Chat chatClient = null;
+
+
                 //get selected table value
                 int selectedRow = table1.getSelectedRow();
 
@@ -109,7 +118,14 @@ public class UserDashboard extends JFrame {
 //                    ChatUser cu = new ChatUser(umane,11,nicname, "imageData".getBytes());
                     SwingUtilities.invokeLater(UserChat::new);
 
+                    client.runClient(selectedName, selectedId);
+                    chatClient = client.chatClient;
 
+                    try {
+                        chatClient.subscribe(User.getId());
+                    } catch (RemoteException ex) {
+                        throw new RuntimeException(ex);
+                    }
 
                 } else {
                     System.out.println("No row selected.");

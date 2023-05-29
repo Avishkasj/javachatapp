@@ -19,7 +19,7 @@ public class ChatImp extends UnicastRemoteObject implements Chat {
     private List<Observer> observers = new ArrayList<>();
 
 //--
-    private List<Integer>sub=new ArrayList<Integer>();
+    private List<Integer>sub=new ArrayList<>();
 
 
     public List<Message> newMessage = new ArrayList<>();
@@ -51,8 +51,8 @@ public class ChatImp extends UnicastRemoteObject implements Chat {
     }
 
     @Override
-    public void subscribe() throws RemoteException {
-
+    public void subscribe(int userId) throws RemoteException {
+            sub.add(userId);
     }
 
     @Override
