@@ -3,7 +3,6 @@ package com.chatapp.ui.register.Chatroom;
 import com.chatapp.chat.Server.Server;
 import com.chatapp.chat.User;
 import com.chatapp.database.Database;
-import com.chatapp.ui.register.UserDashboard;
 import entity.GroupsEntity;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -17,6 +16,7 @@ public class Chatstart extends JFrame{
     private JPanel startpanel;
     private JButton stopButton;
     private JButton button1;
+    private JButton saveButton;
 
     public Database db = new Database();
     private DefaultTableModel tableModel;
