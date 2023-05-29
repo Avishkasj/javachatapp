@@ -14,6 +14,8 @@ public class UserProfile extends JFrame {
     private JTextField textUname;
     private JTextField textEmail;
     private JButton updateButton; // Button to update user details
+    private JButton avatar;
+    private JTextField textNickname;
 
     public UserProfile() {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -23,6 +25,8 @@ public class UserProfile extends JFrame {
         intID.setText(String.valueOf(User.getId()));
         textUname.setText(User.getUsername());
         textEmail.setText(User.getEmail());
+        //--
+        textNickname.setText(User.getNickname());
 
         // Update user details when the button is clicked
         updateButton.addActionListener(new ActionListener() {
@@ -30,10 +34,13 @@ public class UserProfile extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String newUsername = textUname.getText();
                 String newEmail = textEmail.getText();
+                String newNickname=textNickname.getText();
 
                 UserEntity userEntity = new UserEntity();
                 userEntity.setUsername(newUsername);
                 userEntity.setEmail(newEmail);
+                //userEntity.setAvatar(newAvatar);
+                userEntity.setNickname(newNickname);
 
 
 

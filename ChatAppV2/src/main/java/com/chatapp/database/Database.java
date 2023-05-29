@@ -118,6 +118,7 @@ public class Database {
 
         User.setUsername(userEntity.getUsername());
         User.setEmail(userEntity.getEmail());
+        User.setNickname(userEntity.getNickname());
 
         int updated;
         try {
