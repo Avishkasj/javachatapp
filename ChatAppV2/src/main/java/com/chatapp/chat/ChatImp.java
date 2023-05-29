@@ -1,5 +1,9 @@
 package com.chatapp.chat;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
@@ -64,7 +68,28 @@ public class ChatImp extends UnicastRemoteObject implements Chat {
 
     @Override
     public void saveToFile() throws RemoteException {
+        try (FileOutputStream fos = new FileOutputStream("messages.ser");
+             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
 
+            oos.writeObject(newMessage);
+
+            System.out.println("Messages saved to file: messages.ser");
+
+            // Read and print the file contents for verification
+            try (FileInputStream fis = new FileInputStream("messages.ser");
+                 ObjectInputStream ois = new ObjectInputStream(fis)) {
+
+                List<Message> messages = (List<Message>) ois.readObject();
+                System.out.println("Read messages from file:");
+                for (Message message : messages) {
+                    System.out.println(message);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

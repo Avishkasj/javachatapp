@@ -37,17 +37,19 @@ public class Server {
         }
     }
 
-    public void stopServer(String name) {
+    public void stopServer(String name, int portid) {
+        int port = 30000+portid;
         try {
             Chat chat = chatInstances.get(name);
             if (chat != null) {
-                String[] bindings = Naming.list("rmi://localhost/");
-                for (String binding : bindings) {
-                    if (binding.contains(name)) {
-                        Naming.unbind(binding);
-                        break;
-                    }
-                }
+//                String[] bindings = Naming.list("rmi://localhost/");
+//                for (String binding : bindings) {
+//                    if (binding.contains(name)) {
+//                        Naming.unbind(binding);
+//                        break;
+//                    }
+//                }
+                Naming.unbind("rmi://192.168.8.119:" + port + "/" + name);
                 chatInstances.remove(name);
                 System.out.println("Server '" + name + "' stopped.");
             } else {
