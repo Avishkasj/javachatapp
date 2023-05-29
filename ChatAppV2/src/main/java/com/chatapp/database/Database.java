@@ -1,6 +1,7 @@
 package com.chatapp.database;
 
 import com.chatapp.chat.User;
+import entity.FilesEntity;
 import entity.GroupsEntity;
 import entity.UserEntity;
 import jakarta.persistence.*;
@@ -158,6 +159,19 @@ public class Database {
 
         }
         return updated;
+    }
+
+    public void insertfile(FilesEntity filesEntity){
+        try {
+            et.begin();
+            em.persist(filesEntity);
+            et.commit();
+        }finally {
+            if (et.isActive()){
+                et.rollback();
+            }
+
+        }
     }
 
 
