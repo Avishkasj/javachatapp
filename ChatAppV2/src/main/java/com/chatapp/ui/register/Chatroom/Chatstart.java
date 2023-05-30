@@ -49,6 +49,7 @@ public class Chatstart extends JFrame{
             Object[] rowData = {chatroom.getId(),chatroom.getName(), chatroom.getDescription(), status};
             tableModel.addRow(rowData);
         }
+        
 
 
         startButton.addActionListener(new ActionListener() {
