@@ -85,6 +85,21 @@ public class Database {
         return user;
     }
 
+    public void delete(UserEntity userEntity){
+        try{
+            et.begin();
+            UserEntity user = em.find(UserEntity.class,userEntity.getId());
+            if(user != null){
+                em.remove(user);
+                et.commit();
+            }
+        }finally {
+            if (et.isActive()) {
+                et.rollback();
+            }
+        }
+    }
+
 
 
     public List<GroupsEntity> getRooms() {

@@ -1,6 +1,7 @@
 package com.chatapp.ui.register;
 
 import com.chatapp.chat.Chat;
+import com.chatapp.chat.ChatUser;
 import com.chatapp.chat.Server.Client;
 import com.chatapp.chat.User;
 import com.chatapp.database.Database;
@@ -151,6 +152,8 @@ public class UserDashboard extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 // Check if the client is already subscribed
                 try {
+
+
                     Client client = new Client();
                     Chat chatClient = null;
                     //get selected table value

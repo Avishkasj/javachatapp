@@ -11,6 +11,7 @@ import java.rmi.RemoteException;
 
 public class UserChat extends JFrame{
     private JPanel uchat;
+    private JButton unsucscribeButton;
 
     Client client = new Client();
     Chat chatClient = null;
@@ -25,6 +26,8 @@ public class UserChat extends JFrame{
     JPanel panel = new JPanel();
     JTextField textField = new JTextField(20);
     JButton button = new JButton("Send");
+
+
 
     public UserChat() {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
